@@ -1,8 +1,12 @@
 # NA CLEANTIME CALCULATION ENGINE
 
+<img src="https://github.com/LittleGreenViper/LGV_Cleantime/raw/master/icon.png" align="right" />
+
 ## INTRODUCTION
 
 This is the calculation "engine" for determining milestones in NA cleantime. It allows the implementor to determine important milestones in the lifelong endeavor of NA Recovery.
+
+It's a native [Swift](https://apple.com/swift) "faceless" engine module, meant to compile and link into an Apple application; regardless of platform.
 
 ## WHAT PROBLEM DOES THIS SOLVE?
 
