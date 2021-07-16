@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cleantime Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/Cleantime" class="dashAnchor"></a>
+
+    <a title="Cleantime Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../../index.html">
+          LGV_Cleantime Doumentation
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/LittleGreenViper/LGV_Cleantime">
+            <img class="header-icon" src="../../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../../index.html"> Reference</a>
+      <img class="carat" src="../../img/carat.png" />
+      Cleantime Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/LGV_CleantimeDateCalc.html">LGV_CleantimeDateCalc</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html">– Cleantime</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/LGV_CleantimeKeytagDescription.html">LGV_CleantimeKeytagDescription</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesBody.html">– KeytagResourceNamesBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesRing.html">– KeytagResourceNamesRing</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesText.html">– KeytagResourceNamesText</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>Cleantime</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Cleantime</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a basic struct that contains the components, but in a simpler, read-only, form.</p>
+
+<p>This is what most clients will use, as it also offers interpretations.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V05startC010Foundation0C0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V05startC010Foundation0C0VSgvp">startDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The starting date of the period (the cleandate).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V03endC010Foundation0C0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V03endC010Foundation0C0VSgvp">endDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ending date of the period (today, usually).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V9totalDaysSivp"></a>
+                    <a name="//apple_ref/swift/Property/totalDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V9totalDaysSivp">totalDays</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The total number of days.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">totalDays</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V5yearsSivp"></a>
+                    <a name="//apple_ref/swift/Property/years" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V5yearsSivp">years</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of years since the clean date.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">years</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V6monthsSivp"></a>
+                    <a name="//apple_ref/swift/Property/months" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V6monthsSivp">months</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of months since the last year in the clean date.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">months</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V4daysSivp"></a>
+                    <a name="//apple_ref/swift/Property/days" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V4daysSivp">days</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of days since the last month in the clean date.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">days</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Computed%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Computed Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Computed%20Properties"></a>
+                  <h3 class="section-name"><p>Computed Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V11totalMonthsSivp"></a>
+                    <a name="//apple_ref/swift/Property/totalMonths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V11totalMonthsSivp">totalMonths</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The total number of months (as opposed to months after the year).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">totalMonths</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Key%20Periods"></a>
+                <a name="//apple_ref/swift/Section/Key Periods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Key%20Periods"></a>
+                  <h3 class="section-name"><p>Key Periods</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V14isOneDayOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isOneDayOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V14isOneDayOrMoreSbvp">isOneDayOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has at least one day.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isOneDayOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isThirtyDaysOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isThirtyDaysOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isThirtyDaysOrMoreSbvp">isThirtyDaysOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has thirty days or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isThirtyDaysOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V17isSixtyDaysOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isSixtyDaysOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V17isSixtyDaysOrMoreSbvp">isSixtyDaysOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has sixty days or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSixtyDaysOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isNinetyDaysOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isNinetyDaysOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isNinetyDaysOrMoreSbvp">isNinetyDaysOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has niinety days or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isNinetyDaysOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V17isSixMonthsOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isSixMonthsOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V17isSixMonthsOrMoreSbvp">isSixMonthsOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has six months or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSixMonthsOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isNineMonthsOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isNineMonthsOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isNineMonthsOrMoreSbvp">isNineMonthsOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has nine months or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isNineMonthsOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V15isOneYearOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isOneYearOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V15isOneYearOrMoreSbvp">isOneYearOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has one year or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isOneYearOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V22isEighteenMonthsOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isEighteenMonthsOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V22isEighteenMonthsOrMoreSbvp">isEighteenMonthsOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has eighteen months or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEighteenMonthsOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V16isTwoOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isTwoOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V16isTwoOrMoreYearsSbvp">isTwoOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has two years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isTwoOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V17isFiveOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isFiveOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V17isFiveOrMoreYearsSbvp">isFiveOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has five years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isFiveOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V16isTenOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isTenOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V16isTenOrMoreYearsSbvp">isTenOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has ten years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isTenOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V20isFifteenOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isFifteenOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V20isFifteenOrMoreYearsSbvp">isFifteenOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has fifteen years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isFifteenOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V19isTwentyOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isTwentyOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V19isTwentyOrMoreYearsSbvp">isTwentyOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has twenty years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isTwentyOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V23isTwentyFiveOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isTwentyFiveOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V23isTwentyFiveOrMoreYearsSbvp">isTwentyFiveOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has twenty-five years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isTwentyFiveOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V23isTenThousandDaysOrMoreSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isTenThousandDaysOrMore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V23isTenThousandDaysOrMoreSbvp">isTenThousandDaysOrMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has ten thousand days (27.4 years) or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isTenThousandDaysOrMore</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V19isThirtyOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isThirtyOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V19isThirtyOrMoreYearsSbvp">isThirtyOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has thirty years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isThirtyOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isFortyOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isFortyOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isFortyOrMoreYearsSbvp">isFortyOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has forty years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isFortyOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isFiftyOrMoreYearsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isFiftyOrMoreYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V18isFiftyOrMoreYearsSbvp">isFiftyOrMoreYears</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True, if the date has fifty years or more.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isFiftyOrMoreYears</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer"></a>
+                <a name="//apple_ref/swift/Section/Initializer" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializer"></a>
+                  <h3 class="section-name"><p>Initializer</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV0B0V05startC003endC09totalDays5years6months4daysAE10Foundation0C0VSg_AOS4itcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(startDate:endDate:totalDays:years:months:days:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V05startC003endC09totalDays5years6months4daysAE10Foundation0C0VSg_AOS4itcfc">init(startDate:<wbr>endDate:<wbr>totalDays:<wbr>years:<wbr>months:<wbr>days:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Basic initializer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n"><a href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V05startC010Foundation0C0VSgvp">startDate</a></span> <span class="nv">inStartDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="n"><a href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V03endC010Foundation0C0VSgvp">endDate</a></span> <span class="nv">inEndDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="n"><a href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V9totalDaysSivp">totalDays</a></span> <span class="nv">inTotalDays</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n"><a href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V5yearsSivp">years</a></span> <span class="nv">inYears</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n"><a href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V6monthsSivp">months</a></span> <span class="nv">inMonths</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n"><a href="../../Structs/LGV_CleantimeDateCalc/Cleantime.html#/s:13LGV_Cleantime0a1_B8DateCalcV0B0V4daysSivp">days</a></span> <span class="nv">inDays</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>startDate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The starting date</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>endDate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ending date</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalDays</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of days between the two dates (inclusive).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>years</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of years between the two dates.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>months</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The  number of months, over the years, between the two dates.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>days</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The  number of days, over the months and years, between the two dates.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-07-16)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
