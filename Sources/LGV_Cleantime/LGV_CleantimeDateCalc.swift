@@ -29,8 +29,9 @@ import Foundation
  This will not work with starting dates less than Jan 1, 1950.
 */
 public struct LGV_CleantimeDateCalc {
-    // MARK: Private Property
-    
+    /* ################################################################################################################################## */
+    // MARK: Private Constant Instance Properties
+    /* ################################################################################################################################## */
     /* ################################################################## */
     /**
      The starting date of the period (the cleandate).
@@ -43,10 +44,86 @@ public struct LGV_CleantimeDateCalc {
      */
     private let _endDate: Date?
 
-    // MARK: Open to World + Dog
+    /* ################################################################## */
+    /**
+     The total number of days.
+     */
+    private let _totalDays: Int
     
     /* ################################################################################################################################## */
-    // MARK: - Cleantime Container -
+    // MARK: Private Instance Properties
+    /* ################################################################################################################################## */
+    /* ################################################################## */
+    /**
+     The number of years since the clean date.
+     */
+    private var _years: Int = 0
+    
+    /* ################################################################## */
+    /**
+     The number of months since the last year in the clean date.
+     */
+    private var _months: Int = 0
+    
+    /* ################################################################## */
+    /**
+     The number of days since the last month in the clean date.
+     */
+    private var _days: Int = 0
+
+    /* ################################################################## */
+    /**
+     This is the designated initializer. It takes two dates, and calculates between them.
+    
+     - parameter startDate: This is the "from" date. It is the start of the calculation.
+     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
+     */
+    public init(startDate inStartDate: Date, endDate inNowDate: Date? = nil) {
+        // This strips out the hours/minutes/seconds.
+        if  let cleanDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inStartDate)),
+            let nowDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inNowDate ?? Date())) {
+            // The reason for all this wackiness, is we want to completely strip out the time element of each date. We want the days to be specified at noon.
+            let fromString: String = DateFormatter.localizedString(from: cleanDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
+            let toString: String = DateFormatter.localizedString(from: nowDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeStyle = .none
+            dateFormatter.dateStyle = .short
+            
+            // We have stripped out the time information, and each day is at noon.
+            _startDate = dateFormatter.date(from: fromString)?.addingTimeInterval(43200)  // Make it Noon, Numbah One.
+            _endDate = dateFormatter.date(from: toString)?.addingTimeInterval(43200)
+            
+            if let startDate = _startDate,
+               let endDate = _endDate,
+               startDate < endDate {
+                // We get the total days.
+                _totalDays = Int(trunc((endDate.timeIntervalSince(startDate)) / 86400.0 )) // Change seconds into days.
+            
+                let myCalendar: Calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
+                // Create our answer from the components of the result.
+                let unitFlags: NSCalendar.Unit = [NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day]
+                let myComponents = (myCalendar as NSCalendar).components(unitFlags, from: _startDate!, to: _endDate!, options: NSCalendar.Options.wrapComponents)
+                
+                if  let yearsTmp = myComponents.year,
+                    let monthsTmp = myComponents.month,
+                    let daysTmp = myComponents.day {
+                    _years = yearsTmp
+                    _months = monthsTmp
+                    _days = daysTmp
+                }
+            } else {
+                _totalDays = 0
+            }
+        } else {
+            _totalDays = 0
+            _startDate = nil
+            _endDate = nil
+        }
+    }
+
+    /* ################################################################################################################################## */
+    // MARK: - Public Cleantime Container Struct -
     /* ################################################################################################################################## */
     /**
      This is a basic struct that contains the components, but in a simpler, read-only, form.
@@ -54,6 +131,9 @@ public struct LGV_CleantimeDateCalc {
      This is what most clients will use, as it also offers interpretations.
      */
     public struct Cleantime {
+        /* ############################################################################################################################## */
+        // MARK: Constant Properties
+        /* ############################################################################################################################## */
         /* ################################################################## */
         /**
          The starting date of the period (the cleandate).
@@ -90,8 +170,9 @@ public struct LGV_CleantimeDateCalc {
          */
         public let days: Int
         
+        /* ############################################################################################################################## */
         // MARK: Computed Properties
-        
+        /* ############################################################################################################################## */
         /* ################################################################## */
         /**
          The total number of months (as opposed to months after the year).
@@ -208,17 +289,19 @@ public struct LGV_CleantimeDateCalc {
          */
         public var isFiftyOrMoreYears: Bool { 49 < years }
         
+        /* ############################################################################################################################## */
         // MARK: Initializer
-        
+        /* ############################################################################################################################## */
         /* ################################################################## */
         /**
-         Basic initializer
-         - parameter startDate: The starting date
-         - parameter endDate: The ending date
-         - parameter totalDays: The total number of days between the two dates (inclusive).
-         - parameter years: The total number of years between the two dates.
-         - parameter months: The  number of months, over the years, between the two dates.
-         - parameter days: The  number of days, over the months and years, between the two dates.
+         Basic initializer. All parameters required.
+         - parameters:
+             - startDate: The starting date
+             - endDate: The ending date
+             - totalDays: The total number of days between the two dates (inclusive).
+             - years: The total number of years between the two dates.
+             - months: The  number of months, over the years, between the two dates.
+             - days: The  number of days, over the months and years, between the two dates.
          */
         public init(startDate inStartDate: Date?, endDate inEndDate: Date?, totalDays inTotalDays: Int, years inYears: Int, months inMonths: Int, days inDays: Int) {
             totalDays = inTotalDays
@@ -227,81 +310,6 @@ public struct LGV_CleantimeDateCalc {
             days = inDays
             startDate = inStartDate
             endDate = inEndDate
-        }
-    }
-    
-    /* ################################################################## */
-    /**
-     The total number of days.
-     */
-    private let _totalDays: Int
-    
-    /* ################################################################## */
-    /**
-     The number of years since the clean date.
-     */
-    private var _years: Int = 0
-    
-    /* ################################################################## */
-    /**
-     The number of months since the last year in the clean date.
-     */
-    private var _months: Int = 0
-    
-    /* ################################################################## */
-    /**
-     The number of days since the last month in the clean date.
-     */
-    private var _days: Int = 0
-
-    /* ################################################################## */
-    /**
-     This is the designated initializer. It takes two dates, and calculates between them.
-    
-     - parameter startDate: This is the "from" date. It is the start of the calculation.
-     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
-     */
-    public init(startDate inStartDate: Date, endDate inNowDate: Date? = nil) {
-        // This strips out the hours/minutes/seconds.
-        if  let cleanDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inStartDate)),
-            let nowDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inNowDate ?? Date())) {
-            // The reason for all this wackiness, is we want to completely strip out the time element of each date. We want the days to be specified at noon.
-            let fromString: String = DateFormatter.localizedString(from: cleanDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
-            let toString: String = DateFormatter.localizedString(from: nowDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.timeStyle = .none
-            dateFormatter.dateStyle = .short
-            
-            // We have stripped out the time information, and each day is at noon.
-            _startDate = dateFormatter.date(from: fromString)?.addingTimeInterval(43200)  // Make it Noon, Numbah One.
-            _endDate = dateFormatter.date(from: toString)?.addingTimeInterval(43200)
-            
-            if let startDate = _startDate,
-               let endDate = _endDate,
-               startDate < endDate {
-                // We get the total days.
-                _totalDays = Int(trunc((endDate.timeIntervalSince(startDate)) / 86400.0 )) // Change seconds into days.
-            
-                let myCalendar: Calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
-                // Create our answer from the components of the result.
-                let unitFlags: NSCalendar.Unit = [NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day]
-                let myComponents = (myCalendar as NSCalendar).components(unitFlags, from: _startDate!, to: _endDate!, options: NSCalendar.Options.wrapComponents)
-                
-                if  let yearsTmp = myComponents.year,
-                    let monthsTmp = myComponents.month,
-                    let daysTmp = myComponents.day {
-                    _years = yearsTmp
-                    _months = monthsTmp
-                    _days = daysTmp
-                }
-            } else {
-                _totalDays = 0
-            }
-        } else {
-            _totalDays = 0
-            _startDate = nil
-            _endDate = nil
         }
     }
 }
