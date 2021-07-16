@@ -8,6 +8,10 @@ This is the calculation "engine" for determining milestones in NA cleantime. It 
 
 It's a native [Swift](https://apple.com/swift) "faceless" engine module, meant to compile and link into an Apple application; regardless of platform.
 
+## CODE DOCUMENTATION
+
+[Detailed API documentation is available here.](https://littlegreenviper.github.io/LGV_Cleantime/)
+
 ## WHAT PROBLEM DOES THIS SOLVE?
 
 NA cleantime has a series of "culturally significant" milestones, recognized as members remain abstinent and practicing the NA program. These are:
@@ -74,7 +78,7 @@ Once you have the module installed and imported, you use it very simply.
 
 This instantiates the calculator class. You then use that class, like so:
 
-    static func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -> Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
+    func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -> Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
 
     let startDate = makeDate(year: 1953, month: 10, day: 5)
     

@@ -84,6 +84,9 @@
 <p>This is the calculation &ldquo;engine&rdquo; for determining milestones in NA cleantime. It allows the implementor to determine important milestones in the lifelong endeavor of NA Recovery.</p>
 
 <p>It&rsquo;s a native <a href="https://apple.com/swift">Swift</a> &ldquo;faceless&rdquo; engine module, meant to compile and link into an Apple application; regardless of platform.</p>
+<h2 id='code-documentation' class='heading'>CODE DOCUMENTATION</h2>
+
+<p><a href="https://littlegreenviper.github.io/LGV_Cleantime/">Detailed API documentation is available here.</a></p>
 <h2 id='what-problem-does-this-solve' class='heading'>WHAT PROBLEM DOES THIS SOLVE?</h2>
 
 <p>NA cleantime has a series of &ldquo;culturally significant&rdquo; milestones, recognized as members remain abstinent and practicing the NA program. These are:</p>
@@ -146,7 +149,7 @@
 </code></pre>
 
 <p>This instantiates the calculator class. You then use that class, like so:</p>
-<pre class="highlight plaintext"><code>static func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -&gt; Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
+<pre class="highlight plaintext"><code>func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -&gt; Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
 
 let startDate = makeDate(year: 1953, month: 10, day: 5)
 
