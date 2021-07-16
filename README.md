@@ -58,7 +58,7 @@ You can add this project to yours by adding the following line to your [CartFile
 
     github "LittleGreenViper/LGV_Cleantime"
     
-Once the module has been imported, you canb either build the library, and import the module (as above), or you can directly add the files to your project, by going into the `Carthage/Checkouts/LGV_Cleantime/Sources/LGV_Cleantime` directory, and adding the two files, therein, to your project. Note that if you do this, you do not `import` the module.
+Once the module has been imported, you can either build the library, and import the module (as above), or you can directly add the files to your project, by going into the `Carthage/Checkouts/LGV_Cleantime/Sources/LGV_Cleantime` directory, and adding the two files, therein, to your project. Note that if you do this, you do not `import` the module.
 
 ### Directly From GitHub
 
@@ -74,18 +74,43 @@ Once you have the module installed and imported, you use it very simply.
 
 This instantiates the calculator class. You then use that class, like so:
 
-    let totalDays = testTarget.cleanTime.totalDays
-    let totalMonths = testTarget.cleanTime.totalMonths
-    let years = testTarget.cleanTime.years
-    let months = testTarget.cleanTime.months
-    let days = testTarget.cleanTime.months
+    static func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -> Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
 
-`testTarget.cleanTime` is the workhorse. That returns a struct with the calculation results. It has a number of accessors.
+    let startDate = makeDate(year: 1953, month: 10, day: 5)
+    
+    let totalDays = LGV_CleantimeDateCalc(startDate: startDate, endDate: makeDate(year: 2021, month: 7, day: 16)).cleanTime.totalDays
+    let totalMonths = LGV_CleantimeDateCalc(startDate: startDate, endDate: Date()).cleanTime.totalMonths
+    let years = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.years
+    let months = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.months
+    let days = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.months
+
+Note that you do not have to specify an end date. If you leave that out, "today" is assumed.
+
+`LGV_CleantimeDateCalc.cleanTime` is the workhorse. That returns a struct with the calculation results. It has a number of accessors that return true, if the milestone is present within the timespan:
+
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isOneDayOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isThirtyDaysOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isSixtyDaysOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isNinetyDaysOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isSixMonthsOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isNineMonthsOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isOneYearOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isEighteenMonthsOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTwoOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFiveOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTenOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFifteenOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTwentyOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTwentyFiveOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTenThousandDaysOrMore
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isThirtyOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFortyOrMoreYears
+    LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFiftyOrMoreYears
 
 You can also fetch a couple of [Date](https://developer.apple.com/documentation/foundation/date) structures, directly from the instance:
 
-    let components = testTarget.components
-    let timeInterval = testTarget.timeInterval
+    let components = LGV_CleantimeDateCalc(startDate: startDate).components
+    let timeInterval = LGV_CleantimeDateCalc(startDate: startDate).timeInterval
 
 These will return values that will be directly useful for Date utilities.
 

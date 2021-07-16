@@ -133,7 +133,7 @@
 <pre class="highlight plaintext"><code>github "LittleGreenViper/LGV_Cleantime"
 </code></pre>
 
-<p>Once the module has been imported, you canb either build the library, and import the module (as above), or you can directly add the files to your project, by going into the <code>Carthage/Checkouts/LGV_Cleantime/Sources/LGV_Cleantime</code> directory, and adding the two files, therein, to your project. Note that if you do this, you do not <code>import</code> the module.</p>
+<p>Once the module has been imported, you can either build the library, and import the module (as above), or you can directly add the files to your project, by going into the <code>Carthage/Checkouts/LGV_Cleantime/Sources/LGV_Cleantime</code> directory, and adding the two files, therein, to your project. Note that if you do this, you do not <code>import</code> the module.</p>
 <h3 id='directly-from-github' class='heading'>Directly From GitHub</h3>
 
 <p>You can also include the module as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git Submodule</a>, by referencing its Git URL: </p>
@@ -146,18 +146,43 @@
 </code></pre>
 
 <p>This instantiates the calculator class. You then use that class, like so:</p>
-<pre class="highlight plaintext"><code>let totalDays = testTarget.cleanTime.totalDays
-let totalMonths = testTarget.cleanTime.totalMonths
-let years = testTarget.cleanTime.years
-let months = testTarget.cleanTime.months
-let days = testTarget.cleanTime.months
+<pre class="highlight plaintext"><code>static func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -&gt; Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
+
+let startDate = makeDate(year: 1953, month: 10, day: 5)
+
+let totalDays = LGV_CleantimeDateCalc(startDate: startDate, endDate: makeDate(year: 2021, month: 7, day: 16)).cleanTime.totalDays
+let totalMonths = LGV_CleantimeDateCalc(startDate: startDate, endDate: Date()).cleanTime.totalMonths
+let years = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.years
+let months = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.months
+let days = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.months
 </code></pre>
 
-<p><code>testTarget.cleanTime</code> is the workhorse. That returns a struct with the calculation results. It has a number of accessors.</p>
+<p>Note that you do not have to specify an end date. If you leave that out, &ldquo;today&rdquo; is assumed.</p>
+
+<p><code><a href="Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV9cleanTimeAC0B0Vvp">LGV_CleantimeDateCalc.cleanTime</a></code> is the workhorse. That returns a struct with the calculation results. It has a number of accessors that return true, if the milestone is present within the timespan:</p>
+<pre class="highlight plaintext"><code>LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isOneDayOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isThirtyDaysOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isSixtyDaysOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isNinetyDaysOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isSixMonthsOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isNineMonthsOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isOneYearOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isEighteenMonthsOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTwoOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFiveOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTenOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFifteenOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTwentyOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTwentyFiveOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isTenThousandDaysOrMore
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isThirtyOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFortyOrMoreYears
+LGV_CleantimeDateCalc(startDate: startDate).cleanTime.isFiftyOrMoreYears
+</code></pre>
 
 <p>You can also fetch a couple of <a href="https://developer.apple.com/documentation/foundation/date">Date</a> structures, directly from the instance:</p>
-<pre class="highlight plaintext"><code>let components = testTarget.components
-let timeInterval = testTarget.timeInterval
+<pre class="highlight plaintext"><code>let components = LGV_CleantimeDateCalc(startDate: startDate).components
+let timeInterval = LGV_CleantimeDateCalc(startDate: startDate).timeInterval
 </code></pre>
 
 <p>These will return values that will be directly useful for Date utilities.</p>
