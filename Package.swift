@@ -29,11 +29,7 @@ let package = Package(
         .watchOS(.v6),
         .macOS(.v10_14)
     ],
-    products: [
-        .library(
-            name: "LGV_Cleantime",
-            targets: ["LGV_Cleantime"]
-        )],
+    products: [.library( name: "LGV_Cleantime", targets: ["LGV_Cleantime"] )],
     targets: [
         .target(name: "LGV_Cleantime" ),
         .testTarget(name: "LGV_CleantimeTests", dependencies: ["LGV_Cleantime"])

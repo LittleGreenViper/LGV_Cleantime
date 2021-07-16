@@ -1,5 +1,6 @@
 /*
-  © Copyright 2021, Little Green Viper Software Development LLC 
+  © Copyright 2021, Little Green Viper Software Development LLC
+ 
  LICENSE:
  
  MIT License
@@ -432,9 +433,9 @@ public struct LGV_CleantimeKeytagDescription {
             }
             
             return ret
-        } else {
-            return getAShortStackOfTags(totalDays: inTotalDays, totalMonths: inTotalMonths)
         }
+        
+        return getAShortStackOfTags(totalDays: inTotalDays, totalMonths: inTotalMonths)
     }
     
     /* ############################################################## */

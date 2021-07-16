@@ -1,5 +1,6 @@
 /*
-  © Copyright 2021, Little Green Viper Software Development LLC 
+  © Copyright 2021, Little Green Viper Software Development LLC
+ 
  LICENSE:
  
  MIT License

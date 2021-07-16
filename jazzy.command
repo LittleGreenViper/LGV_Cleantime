@@ -8,7 +8,7 @@ rm -drf docs/*
 
 jazzy  --readme ./README.md \
        --github_url https://github.com/LittleGreenViper/LGV_Cleantime \
-       --title "LGV_Cleantime Doumentation" \
+       --title "NA Cleantime Calculation Engine Doumentation" \
        --min_acl public \
        --theme fullwidth
 cp ./icon.png docs/

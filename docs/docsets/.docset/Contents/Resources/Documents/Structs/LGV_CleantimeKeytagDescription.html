@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          LGV_Cleantime Doumentation
+          NA Cleantime Calculation Engine Doumentation
         </a>
          (100% documented)
       </p>
@@ -66,9 +66,6 @@
                 <a class="nav-group-task-link" href="../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesBody.html">– KeytagResourceNamesBody</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesRing.html">– KeytagResourceNamesRing</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesText.html">– KeytagResourceNamesText</a>
               </li>
             </ul>
@@ -87,7 +84,11 @@
 
                 </div>
               </div>
-            <p>This is the container struct for the specialized cleantime keytag descriptions.</p>
+            <p>This will generate a list of String-based enums, that will allow the caller to construct a &ldquo;keytag chain,&rdquo; with the number of keytags that would be awarded for the given cleandate.</p>
+
+<p>This works in a &ldquo;layered&rdquo; fashion, with the &ldquo;body&rdquo; as the bottom layer,  and &ldquo;text&rdquo; over the body.</p>
+
+<p>This struct is really only a namespace for a functional and static enum implementation.</p>
 
           </div>
         </section>
@@ -96,11 +97,11 @@
           <div class="section-content">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Cleantime%20Keytag%20Body%20Resource%20Names"></a>
-                <a name="//apple_ref/swift/Section/Cleantime Keytag Body Resource Names" class="dashAnchor"></a>
+                <a name="/Cleantime%20Keytag%20Body%20Resource%20Name%20Enum"></a>
+                <a name="//apple_ref/swift/Section/Cleantime Keytag Body Resource Name Enum" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Cleantime%20Keytag%20Body%20Resource%20Names"></a>
-                  <h3 class="section-name"><p>Cleantime Keytag Body Resource Names</p>
+                  <a class="section-name-link" href="#/Cleantime%20Keytag%20Body%20Resource%20Name%20Enum"></a>
+                  <h3 class="section-name"><p>Cleantime Keytag Body Resource Name Enum</p>
 </h3>
                 </div>
               </div>
@@ -120,13 +121,15 @@
                       <div class="abstract">
                         <p>This enum has the names for all of the various keytag body visual resources.</p>
 
+<p>You can use these, in conjunction with customized (and/or localized) visual assets.</p>
+
                         <a href="../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesBody.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeytagResourceNamesBody</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeytagResourceNamesBody</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
 
                         </div>
                       </div>
@@ -137,52 +140,11 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Cleantime%20Keytag%20Ring%20Resource%20Names"></a>
-                <a name="//apple_ref/swift/Section/Cleantime Keytag Ring Resource Names" class="dashAnchor"></a>
+                <a name="/Cleantime%20Keytag%20Text%20Resource%20Name%20Enum"></a>
+                <a name="//apple_ref/swift/Section/Cleantime Keytag Text Resource Name Enum" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Cleantime%20Keytag%20Ring%20Resource%20Names"></a>
-                  <h3 class="section-name"><p>Cleantime Keytag Ring Resource Names</p>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesRingO"></a>
-                    <a name="//apple_ref/swift/Enum/KeytagResourceNamesRing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesRingO">KeytagResourceNamesRing</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This enum has the names for all of the various keytag ring visual resources.</p>
-
-                        <a href="../Structs/LGV_CleantimeKeytagDescription/KeytagResourceNamesRing.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeytagResourceNamesRing</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Cleantime%20Keytag%20Text%20Resource%20Names"></a>
-                <a name="//apple_ref/swift/Section/Cleantime Keytag Text Resource Names" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Cleantime%20Keytag%20Text%20Resource%20Names"></a>
-                  <h3 class="section-name"><p>Cleantime Keytag Text Resource Names</p>
+                  <a class="section-name-link" href="#/Cleantime%20Keytag%20Text%20Resource%20Name%20Enum"></a>
+                  <h3 class="section-name"><p>Cleantime Keytag Text Resource Name Enum</p>
 </h3>
                 </div>
               </div>
@@ -208,13 +170,26 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeytagResourceNamesText</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeytagResourceNamesText</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Static%20Constant%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Static Constant Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Static%20Constant%20Properties"></a>
+                  <h3 class="section-name"><p>Public Static Constant Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -242,6 +217,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Static%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Public Static Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Static%20Functions"></a>
+                  <h3 class="section-name"><p>Public Static Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -255,7 +243,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This returns the descriptions of all the tags that apply to the cleantime passed in.</p>
+                        <p>This returns the descriptions of all the tags that apply to the cleantime passed in.
+This is a &ldquo;short&rdquo; stack, meaning that only the highest awarded tag is used at various multi-year thresholds.</p>
 
                       </div>
                       <div class="declaration">
@@ -317,7 +306,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This returns the descriptions of all the tags that apply to the cleantime passed in, but with multiple black (multiYear) tags.
+                        <p>This returns the descriptions of all the tags that apply to the cleantime passed in, but with multiple black (multiYear) tags between multi-year thresholds.
 It will only make a difference after two years.</p>
 
                       </div>
@@ -380,7 +369,7 @@ It will only make a difference after two years.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This returns the description of just the last tag that applies to the cleantime passed in.</p>
+                        <p>This returns the description of the highest tag that applies to the cleantime passed in.</p>
 
                       </div>
                       <div class="declaration">
@@ -429,6 +418,19 @@ It will only make a difference after two years.</p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Instance%20Constant%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Instance Constant Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Instance%20Constant%20Properties"></a>
+                  <h3 class="section-name"><p>Public Instance Constant Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -541,6 +543,19 @@ If zero, then it will not be considered.</p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Instance%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Public Instance Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Instance%20Methods"></a>
+                  <h3 class="section-name"><p>Public Instance Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>

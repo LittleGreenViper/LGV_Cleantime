@@ -1,5 +1,6 @@
 /*
-  © Copyright 2021, Little Green Viper Software Development LLC 
+  © Copyright 2021, Little Green Viper Software Development LLC
+ 
  LICENSE:
  
  MIT License
@@ -227,7 +228,7 @@ public struct LGV_CleantimeDateCalc {
         /**
          True, if the date has eighteen months or more.
          */
-        public var isEighteenMonthsOrMore: Bool { 0 < years && 5 < months }
+        public var isEighteenMonthsOrMore: Bool { 0 < years && ((5 < months) || (1 < years)) }
 
         /* ################################################################## */
         /**
