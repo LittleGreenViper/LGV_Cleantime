@@ -85,12 +85,16 @@ public struct LGV_CleantimeDateCalc {
     /**
      This is the designated initializer. It takes two dates, and calculates between them.
     
-     - parameter startDate: This is the "from" date. It is the start of the calculation.
+     - parameter startDate: This is the "from" date. It is the start of the calculation. If not given, then an invalid date is assumed, and the result will be zero.
      - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
      */
-    public init(startDate inStartDate: Date, endDate inNowDate: Date? = nil) {
+    public init(startDate inStartDate: Date? = nil, endDate inNowDate: Date? = nil) {
+        
         // This strips out the hours/minutes/seconds.
-        if  let cleanDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inStartDate)),
+        if  let startDate = inStartDate,
+            let minDate = Calendar(identifier: .gregorian).date(from: DateComponents(year: 1950, month: 1, day: 1)),
+            let cleanDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: startDate)),
+            cleanDate >= minDate,
             let nowDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inNowDate ?? Date())) {
             // The reason for all this wackiness, is we want to completely strip out the time element of each date. We want the days to be specified at noon.
             let fromString: String = DateFormatter.localizedString(from: cleanDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
@@ -358,5 +362,5 @@ public extension LGV_CleantimeDateCalc {
     /**
      Returns the cleantime as a Time Interval
      */
-    var timeInterval: TimeInterval { _endDate?.timeIntervalSince(_startDate ?? Date()) ?? 0 }
+    var timeInterval: TimeInterval? { nil != _startDate ? _endDate?.timeIntervalSince(_startDate!) : nil }
 }

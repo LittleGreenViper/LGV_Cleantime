@@ -38,7 +38,7 @@ This module will accept two dates (a "cleandate," or the first day clean, and an
 
 It will then report these, in a manner that does not prescribe the format of presentation, but does allow the presenter to determine an accurate reporting UI.
 
-This will not work with starting dates earlier than Jan 1, 1950.
+This will not work with starting dates earlier than Jan 1, 1950. Since NA started in 1953 (for our purposes), this is fine.
 
 The algorithm is non-inclusive. It does not count the initial day. If the start date and end date are the same, zero days have passed.
 
@@ -84,14 +84,15 @@ You can also include the module as a [Git Submodule](https://git-scm.com/book/en
 
 Once you have the module installed and imported, you use it very simply.
 
-    let calculator = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
-
-This instantiates the calculator class. You then use that class, like so:
-
+    // This is a simple utility function for creating dates.
     func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -> Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
 
+    // We make a couple of dates (the date range).
     let startDate = makeDate(year: 1953, month: 10, day: 5)
-    
+    let endDate = makeDate(year: 2021, month: 7, day: 17)
+
+This creates an instance of the engine, given the two dates:
+
     let calculator = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
 
 This is the total number of complete days that have passed between the two dates:
@@ -110,11 +111,11 @@ This is the total number of complete months that have passed since the last comp
     
     let months = calculator.cleanTime.months
     
-This is the total number of complete days that have passed since the last complete year:
+This is the total number of complete days that have passed since the last complete month, after the last complete year:
     
-    let days = calculator.cleanTime.months
+    let days = calculator.cleanTime.days
 
-You may also use an inline instance, like so:
+You may also use a directly-instantiated inline struct, like so:
 
     let totalDays = LGV_CleantimeDateCalc(startDate: startDate, endDate: makeDate(year: 2021, month: 7, day: 16)).cleanTime.totalDays
     let totalMonths = LGV_CleantimeDateCalc(startDate: startDate, endDate: Date()).cleanTime.totalMonths
