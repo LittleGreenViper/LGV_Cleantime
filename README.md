@@ -38,6 +38,14 @@ This module will accept two dates (a "cleandate," or the first day clean, and an
 
 It will then report these, in a manner that does not prescribe the format of presentation, but does allow the presenter to determine an accurate reporting UI.
 
+This will not work with starting dates earlier than Jan 1, 1950.
+
+The algorithm is non-inclusive. It does not count the initial day. If the start date and end date are the same, zero days have passed.
+
+The granularity of the algorithm is complete days. The start time and end time are assumed to be noon.
+
+This uses [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar).
+
 ## IMPLEMENTATION
 
 This is an Apple library, written in native [Swift](https://apple.com/swift). It is not designed for [Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011210) projects.
@@ -46,7 +54,9 @@ This will work for [iOS](https://apple.com/ios), [iPadOS](https://apple.com/ipad
 
 It relies only on the [Swift Foundation Library](https://developer.apple.com/documentation/foundation). It is designed for Swift 5.0 or above.
 
-### [Swift Package Manager](https://swift.org/package-manager/)
+### Installation
+
+#### [Swift Package Manager](https://swift.org/package-manager/)
 
 The recommended implementation is via the Swift Package Manager. The Git URI for this project is:
 
@@ -56,7 +66,7 @@ Once you have included the project, you import it, using this `import` statement
 
     import LGV_Cleantime
     
-### [GitHub Carthage](https://github.com/Carthage/Carthage)
+#### [GitHub Carthage](https://github.com/Carthage/Carthage)
 
 You can add this project to yours by adding the following line to your [CartFile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
 
@@ -64,7 +74,7 @@ You can add this project to yours by adding the following line to your [CartFile
     
 Once the module has been imported, you can either build the library, and import the module (as above), or you can directly add the files to your project, by going into the `Carthage/Checkouts/LGV_Cleantime/Sources/LGV_Cleantime` directory, and adding the two files, therein, to your project. Note that if you do this, you do not `import` the module.
 
-### Directly From GitHub
+#### Directly From GitHub
 
 You can also include the module as a [Git Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules), by referencing its Git URL: 
 
@@ -82,13 +92,38 @@ This instantiates the calculator class. You then use that class, like so:
 
     let startDate = makeDate(year: 1953, month: 10, day: 5)
     
+    let calculator = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
+
+This is the total number of complete days that have passed between the two dates:
+
+    let totalDays = calculator.cleanTime.totalDays
+
+This is the total number of complete months that have passed between the two dates:
+
+    let totalMonths = calculator.cleanTime.totalMonths
+    
+This is the total number of complete years that have passed between the two dates:
+    
+    let years = calculator.cleanTime.years
+    
+This is the total number of complete months that have passed since the last complete year:
+    
+    let months = calculator.cleanTime.months
+    
+This is the total number of complete days that have passed since the last complete year:
+    
+    let days = calculator.cleanTime.months
+
+You may also use an inline instance, like so:
+
     let totalDays = LGV_CleantimeDateCalc(startDate: startDate, endDate: makeDate(year: 2021, month: 7, day: 16)).cleanTime.totalDays
     let totalMonths = LGV_CleantimeDateCalc(startDate: startDate, endDate: Date()).cleanTime.totalMonths
+
+Note that you do not have to specify an end date. If you leave that out, "today" is assumed:
+
     let years = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.years
     let months = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.months
     let days = LGV_CleantimeDateCalc(startDate: startDate).cleanTime.months
-
-Note that you do not have to specify an end date. If you leave that out, "today" is assumed.
 
 `LGV_CleantimeDateCalc.cleanTime` is the workhorse. That returns a struct with the calculation results. It has a number of accessors that return true, if the milestone is present within the timespan:
 

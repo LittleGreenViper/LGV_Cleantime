@@ -1,6 +1,8 @@
 /*
   © Copyright 2021, Little Green Viper Software Development LLC
  
+ Version: 1.0.1
+ 
  LICENSE:
  
  MIT License
@@ -27,7 +29,14 @@ import Foundation
  This is the fundamental core of the recovery time calculator.
  All the action happens in the designated initializer. Once the class is instantiated, its work is done.
  Most clients will use it by retrieving the "cleanTime" property, which will provide interpretations of the dates.
- This will not work with starting dates less than Jan 1, 1950.
+ 
+ This will not work with starting dates earlier than Jan 1, 1950.
+ 
+ The algorithm is non-inclusive. It does not count the initial day. If the start date and end date are the same, zero days have passed.
+
+ The granularity of the algorithm is complete days. The start time and end time are assumed to be noon.
+
+ This uses [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar).
 */
 public struct LGV_CleantimeDateCalc {
     /* ################################################################################################################################## */
