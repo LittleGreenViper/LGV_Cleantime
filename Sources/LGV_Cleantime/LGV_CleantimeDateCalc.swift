@@ -1,7 +1,7 @@
 /*
   © Copyright 2021, Little Green Viper Software Development LLC
  
- Version: 1.0.1
+ Version: 1.1.0
  
  LICENSE:
  
@@ -36,7 +36,7 @@ import Foundation
 
  The granularity of the algorithm is complete days. The start time and end time are assumed to be noon.
 
- This uses [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar).
+ This uses [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) by default, but the calendar can be changed.
 */
 public struct LGV_CleantimeDateCalc {
     /* ################################################################################################################################## */
@@ -95,7 +95,7 @@ public struct LGV_CleantimeDateCalc {
         
         // This strips out the hours/minutes/seconds.
         if  let startDate = inStartDate,
-            let minDate = Calendar(identifier: .gregorian).date(from: DateComponents(year: 1950, month: 1, day: 1)),
+            let minDate = calendar.date(from: DateComponents(year: 1950, month: 1, day: 1)),
             let cleanDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: startDate)),
             cleanDate >= minDate,
             let nowDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inNowDate ?? Date())) {
@@ -329,6 +329,12 @@ public struct LGV_CleantimeDateCalc {
             endDate = inEndDate
         }
     }
+    
+    /* ################################################################## */
+    /**
+     This is the calendar that we'll use. By default, it is [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar).
+     */
+    public var calendar: Calendar = Calendar(identifier: .gregorian)
 }
 
 /* ###################################################################################################################################### */
