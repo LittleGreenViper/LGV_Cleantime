@@ -84,7 +84,7 @@ You can also include the module as a [Git Submodule](https://git-scm.com/book/en
 
 Once you have the module installed and imported, you use it very simply.
 
-    // This is a simple utility function for creating dates.
+    // This is a simple utility function for creating dates from the Gregorian calendar.
     func makeDate(year inYear: Int, month inMonth: Int, day inDay: Int) -> Date { Calendar(identifier: .gregorian).date(from: DateComponents(year: inYear, month: inMonth, day: inDay)) ?? Date() }
 
     // We make a couple of dates (the date range).
@@ -94,6 +94,12 @@ Once you have the module installed and imported, you use it very simply.
 This creates an instance of the engine, given the two dates:
 
     let calculator = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
+
+This creates an instance of the engine, given the two dates (in Gregorian), but specifying the Persian (Iranian) Solar Calendar as the calculation engine:
+
+    let calculator = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate, calendar: Calendar(identifier: .persian))
+    
+You can "mix and match" calendars. [This set of tests does that with the Persian Calendar.](https://github.com/LittleGreenViper/LGV_Cleantime/blob/529f1af050e86eec786bf0dd576c32ed77e35100/Tests/LGV_CleantimeTests/LGV_CleantimeCalculationTests.swift#L1170)
 
 This is the total number of complete days that have passed between the two dates:
 
