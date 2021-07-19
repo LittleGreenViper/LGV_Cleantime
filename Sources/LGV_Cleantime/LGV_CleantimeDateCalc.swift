@@ -95,7 +95,7 @@ public struct LGV_CleantimeDateCalc {
      This is the designated initializer. It takes two dates, and calculates between them.
     
      - parameter startDate: This is the "from" date. It is the start of the calculation. If not given, then an invalid date is assumed, and the result will be zero.
-     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.\
+     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
      - parameter calendar: An optional calendar instance (default is nil). If nil, Gregorian is used.
      */
     public init(startDate inStartDate: Date? = nil, endDate inNowDate: Date? = nil, calendar inCalendar: Calendar? = nil) {
