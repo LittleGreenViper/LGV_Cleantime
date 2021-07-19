@@ -59,7 +59,13 @@ public struct LGV_CleantimeDateCalc {
      The total number of days.
      */
     private let _totalDays: Int
-    
+
+    /* ################################################################## */
+    /**
+     This is the calendar that we'll use. By default, it is [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar).
+     */
+    private let _calendar: Calendar
+
     /* ################################################################################################################################## */
     // MARK: Private Instance Properties
     /* ################################################################################################################################## */
@@ -89,16 +95,18 @@ public struct LGV_CleantimeDateCalc {
      This is the designated initializer. It takes two dates, and calculates between them.
     
      - parameter startDate: This is the "from" date. It is the start of the calculation. If not given, then an invalid date is assumed, and the result will be zero.
-     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
+     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.\
+     - parameter calendar: An optional calendar instance (default is nil). If nil, Gregorian is used.
      */
-    public init(startDate inStartDate: Date? = nil, endDate inNowDate: Date? = nil) {
-        
+    public init(startDate inStartDate: Date? = nil, endDate inNowDate: Date? = nil, calendar inCalendar: Calendar? = nil) {
+        // If a calendar was passed in, we use that.
+        _calendar = nil == inCalendar ? Calendar(identifier: .gregorian) : inCalendar!
         // This strips out the hours/minutes/seconds.
         if  let startDate = inStartDate,
-            let minDate = calendar.date(from: DateComponents(year: 1950, month: 1, day: 1)),
-            let cleanDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: startDate)),
+            let minDate = Calendar(identifier: .gregorian).date(from: DateComponents(year: 1950, month: 1, day: 1)),
+            let cleanDate = _calendar.date(from: _calendar.dateComponents([.year, .month, .day], from: startDate)),
             cleanDate >= minDate,
-            let nowDate = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: inNowDate ?? Date())) {
+            let nowDate = _calendar.date(from: _calendar.dateComponents([.year, .month, .day], from: inNowDate ?? Date())) {
             // The reason for all this wackiness, is we want to completely strip out the time element of each date. We want the days to be specified at noon.
             let fromString: String = DateFormatter.localizedString(from: cleanDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
             let toString: String = DateFormatter.localizedString(from: nowDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
@@ -329,12 +337,6 @@ public struct LGV_CleantimeDateCalc {
             endDate = inEndDate
         }
     }
-    
-    /* ################################################################## */
-    /**
-     This is the calendar that we'll use. By default, it is [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar).
-     */
-    public var calendar: Calendar = Calendar(identifier: .gregorian)
 }
 
 /* ###################################################################################################################################### */
