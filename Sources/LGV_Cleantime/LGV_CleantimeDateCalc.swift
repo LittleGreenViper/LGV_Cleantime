@@ -27,7 +27,7 @@ import Foundation
 /* ###################################################################################################################################### */
 /**
  This is the fundamental core of the recovery time calculator.
- All the action happens in the designated initializer. Once the class is instantiated, its work is done.
+ All the action happens in the designated initializer. Once the struct is instantiated, its work is done.
  Most clients will use it by retrieving the "cleanTime" property, which will provide interpretations of the dates.
  
  This will not work with starting dates earlier than Jan 1, 1950.
