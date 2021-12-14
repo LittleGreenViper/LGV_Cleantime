@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D47B1DF3269CDF0C00139C2C /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
 		D498CF59269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */; };
-		D498CF5B269DB1B00076CC3A /* LGV_Cleantime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D417723E2698977100DA944B /* LGV_Cleantime.framework */; platformFilter = ios; };
 		D498CF63269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */; };
 		D4A5FE8D26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
 /* End PBXBuildFile section */
@@ -25,10 +24,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D417723E2698977100DA944B /* LGV_Cleantime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGV_Cleantime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43C66D82694AC33007D5883 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		D43E203D276909A9001B6B92 /* LGV_Cleantime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGV_Cleantime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagDescription.swift; sourceTree = "<group>"; };
-		D498CF56269DB1B00076CC3A /* LGV_CleantimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LGV_CleantimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D498CF56269DB1B00076CC3A /* LGV_CleantimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LGV_CleantimeTests.xctest; path = "/Users/chrismarshall/Development/LGV/LGV_Cleantime/build/Debug-iphoneos/LGV_CleantimeTests.xctest"; sourceTree = "<absolute>"; };
 		D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeCalculationTests.swift; sourceTree = "<group>"; };
 		D498CF5A269DB1B00076CC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagBuilderTests.swift; sourceTree = "<group>"; };
@@ -48,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D498CF5B269DB1B00076CC3A /* LGV_Cleantime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +59,7 @@
 				D43C66912694AB9E007D5883 /* Sources */,
 				D43C66C52694AC20007D5883 /* Tests */,
 				D43C66D72694AC33007D5883 /* Project-Meta */,
-				D417723E2698977100DA944B /* LGV_Cleantime.framework */,
-				D498CF56269DB1B00076CC3A /* LGV_CleantimeTests.xctest */,
+				D43E203D276909A9001B6B92 /* LGV_Cleantime.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,7 +136,7 @@
 			packageProductDependencies = (
 			);
 			productName = "UICleantime (Dylib)";
-			productReference = D417723E2698977100DA944B /* LGV_Cleantime.framework */;
+			productReference = D43E203D276909A9001B6B92 /* LGV_Cleantime.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D498CF55269DB1B00076CC3A /* LGV_CleantimeTests */ = {
@@ -167,7 +164,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					D42491BD2695F44C0094C15F = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -289,7 +286,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlegreenviper.Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -326,7 +323,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlegreenviper.Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

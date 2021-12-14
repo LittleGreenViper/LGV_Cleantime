@@ -1,3 +1,7 @@
+**1.1.2.0000** *December 14, 2021*
+
+- Updated to the latest toolchains.
+
 **1.1.1.0000** *September 23, 2021*
 
 - Updated to the latest toolchains.
