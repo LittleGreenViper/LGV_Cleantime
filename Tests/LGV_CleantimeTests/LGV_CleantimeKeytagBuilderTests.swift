@@ -286,7 +286,7 @@ class LGV_CleantimeKeytagBuilderTests: XCTestCase {
 
         var testSet = LGV_CleantimeKeytagDescription.getAShortStackOfTags(totalDays: testCalc.totalDays, totalMonths: testCalc.totalMonths)
         
-        XCTAssertEqual(testSet.count, 3)
+        XCTAssertEqual(testSet.count, 4)
         XCTAssertEqual(testSet[0].bodyImage, .body_White)
         XCTAssertEqual(testSet[0].textImage, .text_OneDay)
         XCTAssertEqual(testSet[1].bodyImage, .body_DaygloOrange)
@@ -295,15 +295,15 @@ class LGV_CleantimeKeytagBuilderTests: XCTestCase {
         XCTAssertEqual(testSet[2].textImage, .text_SixtyDays)
 
         if let testTag = LGV_CleantimeKeytagDescription.getLastTagThatApplies(totalDays: testCalc.totalDays, totalMonths: testCalc.totalMonths) {
-            XCTAssertEqual(testTag.bodyImage, .body_DaygloGreen)
-            XCTAssertEqual(testTag.textImage, .text_SixtyDays)
+            XCTAssertEqual(testTag.bodyImage, .body_Red)
+            XCTAssertEqual(testTag.textImage, .text_NinetyDays)
         } else {
             XCTFail("No Keytag!")
         }
 
         testSet = LGV_CleantimeKeytagDescription.getTheFullMonty(totalDays: testCalc.totalDays, totalMonths: testCalc.totalMonths)
         
-        XCTAssertEqual(testSet.count, 3)
+        XCTAssertEqual(testSet.count, 4)
         XCTAssertEqual(testSet[0].bodyImage, .body_White)
         XCTAssertEqual(testSet[0].textImage, .text_OneDay)
         XCTAssertEqual(testSet[1].bodyImage, .body_DaygloOrange)

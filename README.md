@@ -160,6 +160,13 @@ You can also fetch a couple of [Date](https://developer.apple.com/documentation/
 
 These will return values that will be directly useful for Date utilities.
 
+And, finally, you can get "milestones," based on the dates, with these computed properties:
+
+    LGV_CleantimeDateCalc(startDate: startDate).lastCleantimeMilestone
+    LGV_CleantimeDateCalc(startDate: startDate).dateOfLastCleantimeMilestone
+    
+The first returns an enum, with the last "milestone" in the date range, and the second returns the actual date, upon which that milestone occurred.
+
 ### GitHub Project
 
 The GitHub project for this library is [https://github.com/LittleGreenViper/LGV_Cleantime](https://github.com/LittleGreenViper/LGV_Cleantime).

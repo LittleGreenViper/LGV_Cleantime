@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>KeytagResourceNamesText Enumeration Reference</title>
+    <title>CleanTimeEvent Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/KeytagResourceNamesText" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/CleanTimeEvent" class="dashAnchor"></a>
 
-    <a title="KeytagResourceNamesText Enumeration Reference"></a>
+    <a title="CleanTimeEvent Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../../index.html"> Reference</a>
       <img class="carat" src="../../img/carat.png" />
-      KeytagResourceNamesText Enumeration Reference
+      CleanTimeEvent Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -79,15 +79,16 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>KeytagResourceNamesText</h1>
+            <h1>CleanTimeEvent</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeytagResourceNamesText</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CleanTimeEvent</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
               </div>
-            <p>This enum has the names for all of the various keytag text visual resources.</p>
+            <p>This enum is used as the response from the lastCleantimeMilestone computed property.
+This denotes the milestones that we use in NA.</p>
 
           </div>
         </section>
@@ -99,9 +100,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO4noneyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO4noneyA2EmF">none</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO7invalidyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/invalid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO7invalidyA2EmF">invalid</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -109,14 +110,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>No text</p>
+                        <p>Invalid (less than one day)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalid</span></code></pre>
 
                         </div>
                       </div>
@@ -126,9 +127,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO16text_WelcomeBackyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_WelcomeBack" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO16text_WelcomeBackyA2EmF">text_WelcomeBack</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO6oneDayyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/oneDay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO6oneDayyA2EmF">oneDay</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -136,14 +137,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The welcome back (relapse return) text</p>
+                        <p>One day (24 hours)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_WelcomeBack</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">oneDay</span></code></pre>
 
                         </div>
                       </div>
@@ -153,9 +154,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO11text_OneDayyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_OneDay" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO11text_OneDayyA2EmF">text_OneDay</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10thirtyDaysyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/thirtyDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10thirtyDaysyA2EmF">thirtyDays</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -163,14 +164,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One day</p>
+                        <p>Thirty days (around a month)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_OneDay</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">thirtyDays</span></code></pre>
 
                         </div>
                       </div>
@@ -180,9 +181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_ThirtyDaysyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_ThirtyDays" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_ThirtyDaysyA2EmF">text_ThirtyDays</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO9sixtyDaysyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/sixtyDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO9sixtyDaysyA2EmF">sixtyDays</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -190,14 +191,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Thirty days</p>
+                        <p>Sixty days (around two months)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_ThirtyDays</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sixtyDays</span></code></pre>
 
                         </div>
                       </div>
@@ -207,9 +208,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_SixtyDaysyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_SixtyDays" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_SixtyDaysyA2EmF">text_SixtyDays</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10ninetyDaysyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/ninetyDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10ninetyDaysyA2EmF">ninetyDays</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -217,14 +218,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sixty days</p>
+                        <p>Ninety days (around three months)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_SixtyDays</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">ninetyDays</span></code></pre>
 
                         </div>
                       </div>
@@ -234,36 +235,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_NinetyDaysyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_NinetyDays" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_NinetyDaysyA2EmF">text_NinetyDays</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ninety days</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_NinetyDays</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_SixMonthsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_SixMonths" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_SixMonthsyA2EmF">text_SixMonths</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO9sixMonthsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/sixMonths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO9sixMonthsyA2EmF">sixMonths</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -278,7 +252,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_SixMonths</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sixMonths</span></code></pre>
 
                         </div>
                       </div>
@@ -288,9 +262,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_NineMonthsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_NineMonths" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_NineMonthsyA2EmF">text_NineMonths</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10nineMonthsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/nineMonths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10nineMonthsyA2EmF">nineMonths</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -305,7 +279,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_NineMonths</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">nineMonths</span></code></pre>
 
                         </div>
                       </div>
@@ -315,9 +289,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO12text_OneYearyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_OneYear" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO12text_OneYearyA2EmF">text_OneYear</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO7oneYearyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/oneYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO7oneYearyA2EmF">oneYear</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -325,14 +299,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One year</p>
+                        <p>One year (12 months -may be different for leap years)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_OneYear</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">oneYear</span></code></pre>
 
                         </div>
                       </div>
@@ -342,9 +316,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO19text_EighteenMonthsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_EighteenMonths" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO19text_EighteenMonthsyA2EmF">text_EighteenMonths</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO14eighteenMonthsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/eighteenMonths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO14eighteenMonthsyA2EmF">eighteenMonths</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,14 +326,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Eighteen months</p>
+                        <p>One and a half years</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_EighteenMonths</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">eighteenMonths</span></code></pre>
 
                         </div>
                       </div>
@@ -369,9 +343,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_MultiYearyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_MultiYear" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_MultiYearyA2EmF">text_MultiYear</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO5yearsyAESi_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/years(numberOfYears:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO5yearsyAESi_tcAEmF">years(numberOfYears:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -379,14 +353,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Two or more years</p>
+                        <p>Multiple years (associated value is the number of years between 2 and 5)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_MultiYear</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">years</span><span class="p">(</span><span class="nv">numberOfYears</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -396,9 +370,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_FiveYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_FiveYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO14text_FiveYearsyA2EmF">text_FiveYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO9fiveYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/fiveYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO9fiveYearsyA2EmF">fiveYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -413,7 +387,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_FiveYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fiveYears</span></code></pre>
 
                         </div>
                       </div>
@@ -423,9 +397,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO13text_TenYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_TenYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO13text_TenYearsyA2EmF">text_TenYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO8tenYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/tenYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO8tenYearsyA2EmF">tenYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -433,14 +407,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One decade (ten years)</p>
+                        <p>Ten years</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_TenYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tenYears</span></code></pre>
 
                         </div>
                       </div>
@@ -450,9 +424,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO17text_FifteenYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_FifteenYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO17text_FifteenYearsyA2EmF">text_FifteenYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO12fifteenYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/fifteenYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO12fifteenYearsyA2EmF">fifteenYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -467,7 +441,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_FifteenYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fifteenYears</span></code></pre>
 
                         </div>
                       </div>
@@ -477,9 +451,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO16text_TwentyYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_TwentyYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO16text_TwentyYearsyA2EmF">text_TwentyYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO11twentyYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/twentyYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO11twentyYearsyA2EmF">twentyYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -487,14 +461,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decades (Twenty) years</p>
+                        <p>Twenty years</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_TwentyYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">twentyYears</span></code></pre>
 
                         </div>
                       </div>
@@ -504,9 +478,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO20text_TwentyFiveYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_TwentyFiveYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO20text_TwentyFiveYearsyA2EmF">text_TwentyFiveYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO15twentyFiveYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/twentyFiveYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO15twentyFiveYearsyA2EmF">twentyFiveYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -521,7 +495,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_TwentyFiveYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">twentyFiveYears</span></code></pre>
 
                         </div>
                       </div>
@@ -531,9 +505,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO20text_TenThousandDaysyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_TenThousandDays" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO20text_TenThousandDaysyA2EmF">text_TenThousandDays</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO15tenThousandDaysyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/tenThousandDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO15tenThousandDaysyA2EmF">tenThousandDays</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -541,14 +515,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Twenty-seven point four (27.4) years, or ten thousand (10,000) days</p>
+                        <p>Ten thousand days (27.4 years)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_TenThousandDays</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tenThousandDays</span></code></pre>
 
                         </div>
                       </div>
@@ -558,9 +532,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO16text_ThirtyYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_ThirtyYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO16text_ThirtyYearsyA2EmF">text_ThirtyYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO11thirtyYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/thirtyYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO11thirtyYearsyA2EmF">thirtyYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -568,14 +542,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Thirt years</p>
+                        <p>Thirty years</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_ThirtyYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">thirtyYears</span></code></pre>
 
                         </div>
                       </div>
@@ -585,9 +559,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_FortyYearsyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/text_FortyYears" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13LGV_Cleantime0a1_B17KeytagDescriptionV0C17ResourceNamesTextO15text_FortyYearsyA2EmF">text_FortyYears</a>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10fortyYearsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/fortyYears" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO10fortyYearsyA2EmF">fortyYears</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -602,7 +576,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">text_FortyYears</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fortyYears</span></code></pre>
 
                         </div>
                       </div>

@@ -57,6 +57,9 @@
                 <a class="nav-group-task-link" href="../Structs/LGV_CleantimeDateCalc.html">LGV_CleantimeDateCalc</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LGV_CleantimeDateCalc/CleanTimeEvent.html">– CleanTimeEvent</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/LGV_CleantimeDateCalc/Cleantime.html">– Cleantime</a>
               </li>
               <li class="nav-group-task">
@@ -101,6 +104,48 @@ Most clients will use it by retrieving the &ldquo;cleanTime&rdquo; property, whi
 
         <section class="section">
           <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Cleantime%20Event%20Markers"></a>
+                <a name="//apple_ref/swift/Section/Cleantime Event Markers" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Cleantime%20Event%20Markers"></a>
+                  <h3 class="section-name"><p>Cleantime Event Markers</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO"></a>
+                    <a name="//apple_ref/swift/Enum/CleanTimeEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV14CleanTimeEventO">CleanTimeEvent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This enum is used as the response from the lastCleantimeMilestone computed property.
+This denotes the milestones that we use in NA.</p>
+
+                        <a href="../Structs/LGV_CleantimeDateCalc/CleanTimeEvent.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CleanTimeEvent</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Initializer"></a>
@@ -323,6 +368,73 @@ Most clients will use it by retrieving the &ldquo;cleanTime&rdquo; property, whi
             </div>
             <div class="task-group">
               <div class="task-name-container">
+                <a name="/Cleantime%20Milestone%20Utilities"></a>
+                <a name="//apple_ref/swift/Section/Cleantime Milestone Utilities" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Cleantime%20Milestone%20Utilities"></a>
+                  <h3 class="section-name"><p>Cleantime Milestone Utilities</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV04lastB9MilestoneAC14CleanTimeEventOvp"></a>
+                    <a name="//apple_ref/swift/Property/lastCleantimeMilestone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV04lastB9MilestoneAC14CleanTimeEventOvp">lastCleantimeMilestone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last cleantime event. Returns an enum, with the last &ldquo;milestone&rdquo; achieved, as of the end date.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastCleantimeMilestone</span><span class="p">:</span> <span class="kt"><a href="../Structs/LGV_CleantimeDateCalc/CleanTimeEvent.html">CleanTimeEvent</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dateOfLastCleantimeMilestone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp">dateOfLastCleantimeMilestone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last cleantime event. Returns the date that the last cleantime milestone was met. Nil, if invalid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfLastCleantimeMilestone</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
                 <a name="/Date%20Utilities"></a>
                 <a name="//apple_ref/swift/Section/Date Utilities" class="dashAnchor"></a>
                 <div class="section-name-container">
@@ -394,7 +506,7 @@ Most clients will use it by retrieving the &ldquo;cleanTime&rdquo; property, whi
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-01-28)</p>
+      <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-02-24)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

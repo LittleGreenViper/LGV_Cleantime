@@ -1,7 +1,7 @@
 /*
   © Copyright 2021, Little Green Viper Software Development LLC
  
- Version: 1.1.3
+ Version: 1.2.0
  
  LICENSE:
  
@@ -39,6 +39,69 @@ import Foundation
  This uses [the Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) by default, but the calendar can be changed.
 */
 public struct LGV_CleantimeDateCalc {
+    /* ################################################################################################################################## */
+    // MARK: Cleantime Event Markers
+    /* ################################################################################################################################## */
+    /**
+     This enum is used as the response from the lastCleantimeMilestone computed property.
+     This denotes the milestones that we use in NA.
+     */
+    public enum CleanTimeEvent: Equatable {
+        /// Invalid (less than one day)
+        case invalid
+        
+        /// One day (24 hours)
+        case oneDay
+        
+        /// Thirty days (around a month)
+        case thirtyDays
+        
+        /// Sixty days (around two months)
+        case sixtyDays
+        
+        /// Ninety days (around three months)
+        case ninetyDays
+        
+        /// Six months
+        case sixMonths
+        
+        /// Nine months
+        case nineMonths
+        
+        /// One year (12 months -may be different for leap years)
+        case oneYear
+        
+        /// One and a half years
+        case eighteenMonths
+        
+        /// Multiple years (associated value is the number of years between 2 and 5)
+        case years(numberOfYears: Int)
+        
+        /// Five years
+        case fiveYears
+        
+        /// Ten years
+        case tenYears
+        
+        /// Fifteen years
+        case fifteenYears
+        
+        /// Twenty years
+        case twentyYears
+        
+        /// Twenty-five years
+        case twentyFiveYears
+        
+        /// Ten thousand days (27.4 years)
+        case tenThousandDays
+        
+        /// Thirty years
+        case thirtyYears
+        
+        /// Forty years
+        case fortyYears
+    }
+    
     /* ################################################################################################################################## */
     // MARK: Private Constant Instance Properties
     /* ################################################################################################################################## */
@@ -87,6 +150,53 @@ public struct LGV_CleantimeDateCalc {
      */
     private var _days: Int = 0
 
+    /* ################################################################## */
+    /**
+     This will create a date object, from the given year, month, and day. You can also provide a calendar.
+     
+     - parameters:
+        - year: The full year
+        - month: The numeric month (1 - 12)
+        - day: The numeric day (1-31)
+        - calendar: The calendar to be used to make the date. This is optional (if not provided, the Gregorian calendar is used).
+     
+     - returns: A Date object, or nil, if the date is invalid.
+     */
+    private static func _makeDate(year inYear: Int, month inMonth: Int, day inDay: Int, calendar inCalendar: Calendar? = nil) -> Date? {
+        (nil == inCalendar ? Calendar(identifier: .gregorian) : inCalendar!).date(from: DateComponents(year: inYear, month: inMonth, day: inDay))
+    }
+
+    /* ################################################################## */
+    /**
+     Calculates the total number of days.
+     */
+    private static func _calcTotalDays(from inStartDate: Date, to inEndDate: Date) -> Int {
+        var startCalcDate: Date?
+        var endCalcDate: Date?
+
+        let startComponents = Calendar.current.dateComponents([.year, .month, .day], from: inStartDate)
+        if let year = startComponents.year,
+           let month = startComponents.month,
+           let day = startComponents.day {
+            startCalcDate = LGV_CleantimeDateCalc._makeDate(year: year, month: month, day: day, calendar: Calendar.current)
+        }
+        
+        let endComponents = Calendar.current.dateComponents([.year, .month, .day], from: inEndDate)
+        if let year = endComponents.year,
+           let month = endComponents.month,
+           let day = endComponents.day {
+            endCalcDate = LGV_CleantimeDateCalc._makeDate(year: year, month: month, day: day, calendar: Calendar.current)
+        }
+
+        guard let startCalcDate = startCalcDate,
+              let endCalcDate = endCalcDate
+        else { return 0 }
+        
+        guard let totalDays = Calendar.current.dateComponents([.day], from: startCalcDate, to: endCalcDate).day else { return 0 }
+        
+        return max(0, totalDays)
+    }
+
     /* ################################################################################################################################## */
     // MARK: Initializer
     /* ################################################################################################################################## */
@@ -115,15 +225,29 @@ public struct LGV_CleantimeDateCalc {
             dateFormatter.timeStyle = .none
             dateFormatter.dateStyle = .short
             
-            // We have stripped out the time information, and each day is at noon.
-            _startDate = dateFormatter.date(from: fromString)?.addingTimeInterval(43200)  // Make it Noon, Numbah One.
-            _endDate = dateFormatter.date(from: toString)?.addingTimeInterval(43200)
+            var tempComponents = _calendar.dateComponents([.year, .month, .day], from: startDate)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                _startDate = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            } else {
+                _startDate = dateFormatter.date(from: fromString)?.addingTimeInterval(43200)
+            }
+            
+            tempComponents = _calendar.dateComponents([.year, .month, .day], from: nowDate)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                _endDate = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            } else {
+                _endDate = dateFormatter.date(from: toString)?.addingTimeInterval(43200)
+            }
             
             if let startDate = _startDate,
                let endDate = _endDate,
                startDate < endDate {
                 // We get the total days.
-                _totalDays = Int(trunc((endDate.timeIntervalSince(startDate)) / 86400.0 )) // Change seconds into days.
+                _totalDays = Self._calcTotalDays(from: startDate, to: endDate)
             
                 let myCalendar: Calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
                 // Create our answer from the components of the result.
@@ -361,6 +485,301 @@ public extension LGV_CleantimeDateCalc {
      */
     var endDate: Date? { _endDate }
 
+    // MARK: Cleantime Milestone Utilities
+    
+    /* ################################################################## */
+    /**
+     The last cleantime event. Returns an enum, with the last "milestone" achieved, as of the end date.
+     */
+    var lastCleantimeMilestone: CleanTimeEvent {
+        guard 0 < cleanTime.totalDays else { return .invalid }
+        var ret = CleanTimeEvent.invalid
+        
+        if cleanTime.isFortyOrMoreYears {
+            ret = .fortyYears
+        } else if cleanTime.isThirtyOrMoreYears {
+            ret = .thirtyYears
+        } else if cleanTime.isTenThousandDaysOrMore {
+            ret = .tenThousandDays
+        } else if cleanTime.isTwentyFiveOrMoreYears {
+            ret = .twentyFiveYears
+        } else if cleanTime.isTwentyOrMoreYears {
+            ret = .twentyYears
+        } else if cleanTime.isFifteenOrMoreYears {
+            ret = .fifteenYears
+        } else if cleanTime.isTenOrMoreYears {
+            ret = .tenYears
+        } else if cleanTime.isFiveOrMoreYears {
+            ret = .fiveYears
+        } else if cleanTime.isTwoOrMoreYears {
+            ret = .years(numberOfYears: cleanTime.years)
+        } else if cleanTime.isEighteenMonthsOrMore {
+            ret = .eighteenMonths
+        } else if cleanTime.isOneYearOrMore {
+            ret = .oneYear
+        } else if cleanTime.isNineMonthsOrMore {
+            ret = .nineMonths
+        } else if cleanTime.isSixMonthsOrMore {
+            ret = .sixMonths
+        } else if cleanTime.isNinetyDaysOrMore {
+            ret = .ninetyDays
+        } else if cleanTime.isSixtyDaysOrMore {
+            ret = .sixtyDays
+        } else if cleanTime.isThirtyDaysOrMore {
+            ret = .thirtyDays
+        } else if cleanTime.isOneDayOrMore {
+            ret = .oneDay
+        }
+        
+        return ret
+    }
+
+    /* ################################################################## */
+    /**
+     The last cleantime event. Returns the date that the last cleantime milestone was met. Nil, if invalid.
+     */
+    var dateOfLastCleantimeMilestone: Date? {
+        var ret: Date?
+        
+        guard let startDate = startDate else { return ret }
+        
+        let oneDay: TimeInterval = 60 * 60 * 24
+        let startDateComponents = _calendar.dateComponents([.year, .month, .day], from: startDate)
+        
+        switch lastCleantimeMilestone {
+        case .oneDay:
+            let temp = startDate.addingTimeInterval(oneDay)
+            let tempComponents = _calendar.dateComponents([.year, .month, .day], from: temp)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+            
+        case .thirtyDays:
+            let temp = startDate.addingTimeInterval(30 * oneDay)
+            let tempComponents = _calendar.dateComponents([.year, .month, .day], from: temp)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+
+        case .sixtyDays:
+            let temp = startDate.addingTimeInterval(60 * oneDay)
+            let tempComponents = _calendar.dateComponents([.year, .month, .day], from: temp)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+
+        case .ninetyDays:
+            let temp = startDate.addingTimeInterval(90 * oneDay)
+            let tempComponents = _calendar.dateComponents([.year, .month, .day], from: temp)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+
+        case .sixMonths:
+            if var year = startDateComponents.year,
+               var month = startDateComponents.month,
+               let day = startDateComponents.day {
+                month += 6
+                if 12 < month {
+                    month = 12 - month
+                    year += 1
+                }
+                
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+            
+        case .nineMonths:
+            if var year = startDateComponents.year,
+               var month = startDateComponents.month,
+               let day = startDateComponents.day {
+                month += 9
+                if 12 < month {
+                    month = 12 - month
+                    year += 1
+                }
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+
+        case .oneYear:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 1, month: month, day: day, calendar: _calendar)
+            }
+
+        case .eighteenMonths:
+            if var year = startDateComponents.year,
+               var month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                year += 1
+                month += 6
+                if 12 < month {
+                    month = 12 - month
+                    year += 1
+                }
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+
+        case .years(let numberOfYears):
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + numberOfYears, month: month, day: day, calendar: _calendar)
+            }
+
+        case .fiveYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 5, month: month, day: day, calendar: _calendar)
+            }
+
+        case .tenYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 10, month: month, day: day, calendar: _calendar)
+            }
+
+        case .fifteenYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 15, month: month, day: day, calendar: _calendar)
+            }
+
+        case .twentyYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 20, month: month, day: day, calendar: _calendar)
+            }
+
+        case .twentyFiveYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 25, month: month, day: day, calendar: _calendar)
+            }
+
+        case .tenThousandDays:
+            let temp = startDate.addingTimeInterval(10000 * oneDay)
+            let tempComponents = _calendar.dateComponents([.year, .month, .day], from: temp)
+            if let year = tempComponents.year,
+               let month = tempComponents.month,
+               let day = tempComponents.day {
+                ret = Self._makeDate(year: year, month: month, day: day, calendar: _calendar)
+            }
+
+        case .thirtyYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 30, month: month, day: day, calendar: _calendar)
+            }
+
+        case .fortyYears:
+            if let year = startDateComponents.year,
+               let month = startDateComponents.month,
+               var day = startDateComponents.day {
+                
+                // Special exception for leap years in the Gregorian calendar.
+                if .gregorian == _calendar.identifier,
+                   2 == month,
+                   29 == day {
+                    day = 28
+                }
+
+                ret = Self._makeDate(year: year + 40, month: month, day: day, calendar: _calendar)
+            }
+
+        default:
+            break
+        }
+        
+        return ret
+    }
+    
     // MARK: Date Utilities
     
     /* ################################################################## */
