@@ -24,7 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D432C6C727C81366008D1934 /* LGV_Cleantime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LGV_Cleantime.framework; path = "/Users/chrismarshall/Development/LGV/LGV_Cleantime/build/Debug-iphoneos/LGV_Cleantime.framework"; sourceTree = "<absolute>"; };
+		D431F8A627C96D7A00ED6EDC /* LGV_Cleantime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGV_Cleantime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D431F8A727C96D7A00ED6EDC /* LGV_CleantimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LGV_CleantimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43C66D82694AC33007D5883 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LGV_Cleantime.docc; sourceTree = "<group>"; };
 		D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagDescription.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagBuilderTests.swift; sourceTree = "<group>"; };
 		D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeDateCalc.swift; sourceTree = "<group>"; };
 		D4A5FE91269732BE009D0D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4E66C7B27A45C7A003F267D /* LGV_CleantimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LGV_CleantimeTests.xctest; path = "/Users/chrismarshall/Development/LGV/LGV_Cleantime/build/Debug-iphoneos/LGV_CleantimeTests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +60,8 @@
 				D43C66912694AB9E007D5883 /* Sources */,
 				D43C66C52694AC20007D5883 /* Tests */,
 				D43C66D72694AC33007D5883 /* Project-Meta */,
+				D431F8A627C96D7A00ED6EDC /* LGV_Cleantime.framework */,
+				D431F8A727C96D7A00ED6EDC /* LGV_CleantimeTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,7 +139,7 @@
 			packageProductDependencies = (
 			);
 			productName = "UICleantime (Dylib)";
-			productReference = D432C6C727C81366008D1934 /* LGV_Cleantime.framework */;
+			productReference = D431F8A627C96D7A00ED6EDC /* LGV_Cleantime.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D498CF55269DB1B00076CC3A /* LGV_CleantimeTests */ = {
@@ -155,7 +157,7 @@
 			);
 			name = LGV_CleantimeTests;
 			productName = UICleantimeTests;
-			productReference = D4E66C7B27A45C7A003F267D /* LGV_CleantimeTests.xctest */;
+			productReference = D431F8A727C96D7A00ED6EDC /* LGV_CleantimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +289,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlegreenviper.Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -327,7 +329,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.littlegreenviper.Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

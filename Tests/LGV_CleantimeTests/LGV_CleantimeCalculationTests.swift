@@ -84,6 +84,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .invalid)
+        XCTAssertNil(testTarget.timeInterval)
 
         testTarget = LGV_CleantimeDateCalc(startDate: Self.makeDate(year: 1949, month: 12, day: 31))
         XCTAssertEqual(testTarget.cleanTime.totalDays, 0)
@@ -110,6 +111,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .invalid)
+        XCTAssertNil(testTarget.timeInterval)
 
         testTarget = LGV_CleantimeDateCalc(startDate: Date())
         XCTAssertEqual(testTarget.cleanTime.totalDays, 0)
@@ -136,6 +138,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .invalid)
+        XCTAssertEqual(testTarget.timeInterval, 0)
 
         testTarget = LGV_CleantimeDateCalc(startDate: Self.makeDate(year: 2020, month: 12, day: 31), endDate: endDate)
         XCTAssertEqual(testTarget.cleanTime.totalDays, 1)
@@ -162,6 +165,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneDay)
+        XCTAssertEqual(testTarget.timeInterval, 86400)
 
         testTarget = LGV_CleantimeDateCalc(startDate: Self.makeDate(year: 2020, month: 12, day: 31), endDate: Self.makeDate(year: 2020, month: 12, day: 31))
         XCTAssertEqual(testTarget.cleanTime.totalDays, 0)
@@ -188,6 +192,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .invalid)
+        XCTAssertEqual(testTarget.timeInterval, 0)
 
         testTarget = LGV_CleantimeDateCalc(startDate: Self.makeDate(year: 2020, month: 12, day: 30), endDate: Self.makeDate(year: 2020, month: 12, day: 31))
         XCTAssertEqual(testTarget.cleanTime.totalDays, 1)
@@ -214,6 +219,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneDay)
+        XCTAssertEqual(testTarget.timeInterval, 86400)
 
         startDate = Self.makeDate(year: 1950, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -241,6 +247,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertTrue(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertTrue(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fortyYears)
+        XCTAssertEqual(testTarget.timeInterval, 2240611200)
 
         startDate = Self.makeDate(year: 1960, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -268,6 +275,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertTrue(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertTrue(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fortyYears)
+        XCTAssertEqual(testTarget.timeInterval, 1925078400)
 
         startDate = Self.makeDate(year: 1970, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -295,6 +303,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertTrue(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertTrue(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fortyYears)
+        XCTAssertEqual(testTarget.timeInterval, 1609459200)
 
         startDate = Self.makeDate(year: 1980, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -322,6 +331,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertTrue(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fortyYears)
+        XCTAssertEqual(testTarget.timeInterval, 1293926400)
 
         startDate = Self.makeDate(year: 2000, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -349,6 +359,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .twentyYears)
+        XCTAssertEqual(testTarget.timeInterval, 662774400)
 
         startDate = Self.makeDate(year: 2020, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -376,6 +387,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 31622400)
 
         startDate = Self.makeDate(year: 2019, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -408,6 +420,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         } else {
             XCTFail("Should be exactly two years!")
         }
+        XCTAssertEqual(testTarget.timeInterval, 63158400)
 
         // Test for non-leap year.
         startDate = Self.makeDate(year: 2019, month: 1, day: 1)
@@ -436,6 +449,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 31536000)
 
         testTarget = LGV_CleantimeDateCalc(startDate: endDate, endDate: endDate)
         XCTAssertEqual(testTarget.cleanTime.totalDays, 0)
@@ -462,6 +476,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .invalid)
+        XCTAssertEqual(testTarget.timeInterval, 0)
 
         startDate = Self.makeDate(year: 2023, month: 1, day: 1)
         endDate = Self.makeDate(year: 2021, month: 1, day: 1)
@@ -490,6 +505,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .invalid)
+        XCTAssertEqual(testTarget.timeInterval, -63072000)
     }
     
     /* ################################################################## */
@@ -522,6 +538,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertTrue(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertTrue(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fortyYears)
+        XCTAssertEqual(testTarget.timeInterval, 2121984000)
 
         let components = testTarget.components
         XCTAssertEqual(components.year, 67)
@@ -556,6 +573,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .thirtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 2678400)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1953, month: 11, day: 4))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 0)
@@ -582,6 +600,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .thirtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 2592000)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1953, month: 11, day: 6))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 1)
@@ -608,6 +627,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .thirtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 2764800)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1953, month: 12, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 2)
@@ -634,6 +654,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .sixtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 5270400)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1954, month: 12, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 14)
@@ -660,6 +681,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 36806400)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1953, month: 12, day: 4))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 1)
@@ -686,6 +708,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .sixtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 5184000)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1954, month: 1, day: 4))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 2)
@@ -712,6 +735,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .ninetyDays)
+        XCTAssertEqual(testTarget.timeInterval, 7862400)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1954, month: 4, day: 4))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 5)
@@ -738,6 +762,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .ninetyDays)
+        XCTAssertEqual(testTarget.timeInterval, 15638400)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1954, month: 4, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 6)
@@ -764,6 +789,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .sixMonths)
+        XCTAssertEqual(testTarget.timeInterval, 15724800)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1954, month: 8, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 10)
@@ -790,6 +816,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .nineMonths)
+        XCTAssertEqual(testTarget.timeInterval, 26262000)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1963, month: 11, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 121)
@@ -816,6 +843,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .tenYears)
+        XCTAssertEqual(testTarget.timeInterval, 318211200)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1963, month: 10, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 120)
@@ -842,6 +870,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .tenYears)
+        XCTAssertEqual(testTarget.timeInterval, 315529200)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1968, month: 10, day: 5))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 180)
@@ -868,6 +897,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fifteenYears)
+        XCTAssertEqual(testTarget.timeInterval, 473382000)
 
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: Self.makeDate(year: 1960, month: 1, day: 1))
         XCTAssertEqual(testTarget.cleanTime.totalMonths, 74)
@@ -894,6 +924,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .fiveYears)
+        XCTAssertEqual(testTarget.timeInterval, 196905600)
    }
     
     /* ################################################################## */
@@ -927,6 +958,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .thirtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 2592000)
 
         startDate = Self.makeDate(year: 2021, month: 1, day: 31)
         endDate = Self.makeDate(year: 2021, month: 3, day: 1)
@@ -955,6 +987,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneDay)
+        XCTAssertEqual(testTarget.timeInterval, 2505600)
 
         startDate = Self.makeDate(year: 2019, month: 2, day: 28)
         endDate = Self.makeDate(year: 2020, month: 2, day: 28)
@@ -983,6 +1016,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 31536000)
 
         startDate = Self.makeDate(year: 2020, month: 1, day: 1)
         endDate = Self.makeDate(year: 2020, month: 3, day: 1)
@@ -1011,6 +1045,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .sixtyDays)
+        XCTAssertEqual(testTarget.timeInterval, 5184000)
 
         endDate = Self.makeDate(year: 2021, month: 1, day: 29)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -1038,6 +1073,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 34041600)
 
         endDate = Self.makeDate(year: 2021, month: 1, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -1065,6 +1101,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 31622400)
 
         endDate = Self.makeDate(year: 2021, month: 3, day: 31)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -1092,6 +1129,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 39308400)
 
         endDate = Self.makeDate(year: 2021, month: 4, day: 1)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate)
@@ -1119,6 +1157,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 39394800)
 
         startDate = Self.makeDate(year: 2020, month: 2, day: 29)
         endDate = Self.makeDate(year: 2021, month: 2, day: 28)
@@ -1147,6 +1186,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 31536000)
     }
     
     /* ################################################################## */
@@ -1180,6 +1220,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .eighteenMonths)
+        XCTAssertEqual(testTarget.timeInterval, 47523600)
 
         startDate = Self.makeDate(year: 2018, month: 8, day: 29)
         endDate = Self.makeDate(year: 2020, month: 4, day: 1)
@@ -1208,6 +1249,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .eighteenMonths)
+        XCTAssertEqual(testTarget.timeInterval, 50198400)
     }
 
     /* ################################################################## */
@@ -1242,6 +1284,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .tenYears)
+        XCTAssertEqual(testTarget.timeInterval, 385430400)
 
         endDate = Self.makeDate(year: 1388, month: 2, day: 2, calendar: calendar)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate, calendar: calendar)
@@ -1269,6 +1312,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneDay)
+        XCTAssertEqual(testTarget.timeInterval, 518400)
 
         endDate = Self.makeDate(year: 1389, month: 2, day: 2, calendar: calendar)
         testTarget = LGV_CleantimeDateCalc(startDate: startDate, endDate: endDate, calendar: calendar)
@@ -1296,6 +1340,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .oneYear)
+        XCTAssertEqual(testTarget.timeInterval, 32054400)
 
         startDate = Self.makeDate(year: 2018, month: 8, day: 29)
         endDate = Self.makeDate(year: 2020, month: 4, day: 1)
@@ -1324,6 +1369,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .eighteenMonths)
+        XCTAssertEqual(testTarget.timeInterval, 50198400)
 
         startDate = Self.makeDate(year: 1397, month: 6, day: 7, calendar: calendar)
         endDate = Self.makeDate(year: 2020, month: 4, day: 1)
@@ -1352,6 +1398,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .eighteenMonths)
+        XCTAssertEqual(testTarget.timeInterval, 50198400)
 
         startDate = Self.makeDate(year: 2018, month: 8, day: 29)
         endDate = Self.makeDate(year: 1399, month: 1, day: 13, calendar: calendar)
@@ -1380,6 +1427,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .eighteenMonths)
+        XCTAssertEqual(testTarget.timeInterval, 50198400)
 
         startDate = Self.makeDate(year: 1397, month: 6, day: 7, calendar: calendar)
         endDate = Self.makeDate(year: 1399, month: 1, day: 13, calendar: calendar)
@@ -1408,6 +1456,7 @@ class LGV_CleantimeCalculationTests: XCTestCase {
         XCTAssertFalse(testTarget.cleanTime.isFortyOrMoreYears)
         XCTAssertFalse(testTarget.cleanTime.isFiftyOrMoreYears)
         XCTAssertEqual(testTarget.lastCleantimeMilestone, .eighteenMonths)
+        XCTAssertEqual(testTarget.timeInterval, 50198400)
     }
     
     /* ################################################################## */
