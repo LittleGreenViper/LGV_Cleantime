@@ -162,9 +162,13 @@ These will return values that will be directly useful for Date utilities.
 
 And, finally, you can get "milestones," based on the dates, with these computed properties:
 
-    LGV_CleantimeDateCalc(startDate: startDate).lastCleantimeMilestone
-    LGV_CleantimeDateCalc(startDate: startDate).dateOfLastCleantimeMilestone
-    
+[   `LGV_CleantimeDateCalc(startDate: startDate).lastCleantimeMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV04lastB9MilestoneAC14CleanTimeEventOvp)
+[   `LGV_CleantimeDateCalc(startDate: startDate).dateOfLastCleantimeMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp)
+
+And this method:
+
+[   `LGV_CleantimeDateCalc(startDate: startDate).dateOfThisCleantimeMilestone(_: CleanTimeEvent) -> Date?`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfThisB9Milestoney10Foundation0C0VSgAC14CleanTimeEventOF)
+        
 The first returns an enum, with the last "milestone" in the date range, and the second returns the actual date, upon which that milestone occurred.
 
 ### GitHub Project

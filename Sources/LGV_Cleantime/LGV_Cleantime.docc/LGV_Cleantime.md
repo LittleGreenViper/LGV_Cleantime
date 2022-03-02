@@ -1,5 +1,7 @@
 # ``LGV_Cleantime``
 
+[!icon](icon.png)
+
 This is the calculation "engine" for determining milestones in NA cleantime. It allows the implementor to determine important milestones in the lifelong endeavor of NA Recovery.
 
 ## Overview
@@ -157,6 +159,15 @@ You can also fetch a couple of [Date](https://developer.apple.com/documentation/
     let timeInterval = LGV_CleantimeDateCalc(startDate: startDate).timeInterval
 
 These will return values that will be directly useful for Date utilities.
+
+And, finally, you can get "milestones," based on the dates, with these computed properties:
+
+[   `LGV_CleantimeDateCalc(startDate: startDate).lastCleantimeMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV04lastB9MilestoneAC14CleanTimeEventOvp)
+[   `LGV_CleantimeDateCalc(startDate: startDate).dateOfLastCleantimeMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp)
+
+And this method:
+
+[   `LGV_CleantimeDateCalc(startDate: startDate).dateOfThisCleantimeMilestone(_: CleanTimeEvent) -> Date?`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfThisB9Milestoney10Foundation0C0VSgAC14CleanTimeEventOF)
 
 ### GitHub Project
 
