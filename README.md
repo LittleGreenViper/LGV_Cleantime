@@ -164,6 +164,7 @@ And, finally, you can get "milestones," based on the dates, with these computed 
 
 [   `LGV_CleantimeDateCalc(startDate: startDate).lastCleantimeMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV04lastB9MilestoneAC14CleanTimeEventOvp)
 [   `LGV_CleantimeDateCalc(startDate: startDate).dateOfLastCleantimeMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp)
+[   `LGV_CleantimeDateCalc(startDate: startDate).dateOfLastAnnualMilestone`](https://littlegreenviper.github.io/LGV_Cleantime/Structs/LGV_CleantimeDateCalc.html#/s:13LGV_Cleantime0a1_B8DateCalcV25dateOfLastAnnualMilestone10Foundation0C0VSgvp)
 
 And this method:
 

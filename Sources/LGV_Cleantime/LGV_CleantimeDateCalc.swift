@@ -470,20 +470,6 @@ public extension LGV_CleantimeDateCalc {
      */
     var endDate: Date? { _endDate }
 
-    /* ################################################################## */
-    /**
-     - returns: The date, or nil, of the last yearly milestone (if less than 1 year since the initial date, then this returns nil)
-     */
-    var dateOfLastAnnualMilestone: Date? {
-        guard let startDate = _startDate,
-              let endDate = _endDate,
-              let years = _calendar.dateComponents([.year], from: _calendar.startOfDay(for: startDate), to: _calendar.startOfDay(for: endDate)).year,
-              0 < years
-        else { return nil }
-        
-        return yearsFromStart(years)
-    }
-
     // MARK: Cleantime Milestone Utilities
     
     /* ################################################################## */
@@ -538,7 +524,21 @@ public extension LGV_CleantimeDateCalc {
      The last cleantime event. Returns the date that the last cleantime milestone was met. Nil, if invalid.
      */
     var dateOfLastCleantimeMilestone: Date? { dateOfThisCleantimeMilestone(lastCleantimeMilestone) }
-    
+
+    /* ################################################################## */
+    /**
+     - returns: The date, or nil, of the last yearly milestone (if less than 1 year since the initial date, then this returns nil)
+     */
+    var dateOfLastAnnualMilestone: Date? {
+        guard let startDate = _startDate,
+              let endDate = _endDate,
+              let years = _calendar.dateComponents([.year], from: _calendar.startOfDay(for: startDate), to: _calendar.startOfDay(for: endDate)).year,
+              0 < years
+        else { return nil }
+        
+        return yearsFromStart(years)
+    }
+
     /* ################################################################## */
     /**
      Returns the date of the milestone this many days from the start.
