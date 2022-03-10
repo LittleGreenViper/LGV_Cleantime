@@ -1,3 +1,7 @@
+**1.3.1** *March 10, 2022*
+
+- Added the `dateOfLastAnnualMilestone` computed property.
+
 **1.3.0** *February 25, 2022*
 
 - Added the `dateOfThisCleantimeMilestone()` method.

@@ -1,7 +1,7 @@
 /*
   © Copyright 2021, Little Green Viper Software Development LLC
  
- Version: 1.3.0
+ Version: 1.3.1
  
  LICENSE:
  
@@ -312,7 +312,7 @@ public struct LGV_CleantimeDateCalc {
          The total number of months (as opposed to months after the year).
          */
         public var totalMonths: Int { (years * 12) + months }
-        
+
         // MARK: Key Periods
         
         /* ################################################################## */
@@ -469,6 +469,20 @@ public extension LGV_CleantimeDateCalc {
      The ending date of the period (today, usually).
      */
     var endDate: Date? { _endDate }
+
+    /* ################################################################## */
+    /**
+     - returns: The date, or nil, of the last yearly milestone (if less than 1 year since the initial date, then this returns nil)
+     */
+    var dateOfLastAnnualMilestone: Date? {
+        guard let startDate = _startDate,
+              let endDate = _endDate,
+              let years = _calendar.dateComponents([.year], from: _calendar.startOfDay(for: startDate), to: _calendar.startOfDay(for: endDate)).year,
+              0 < years
+        else { return nil }
+        
+        return yearsFromStart(years)
+    }
 
     // MARK: Cleantime Milestone Utilities
     
