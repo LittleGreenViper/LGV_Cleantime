@@ -1,3 +1,7 @@
+**1.3.2** *March 15, 2022*
+
+- Updated to the latest tools. No other changes.
+
 **1.3.1** *March 10, 2022*
 
 - Added the `dateOfLastAnnualMilestone` computed property.
