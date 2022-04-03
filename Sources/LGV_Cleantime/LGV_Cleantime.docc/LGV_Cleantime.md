@@ -1,7 +1,5 @@
 # ``LGV_Cleantime``
 
-[!icon](icon.png)
-
 This is the calculation "engine" for determining milestones in NA cleantime. It allows the implementor to determine important milestones in the lifelong endeavor of NA Recovery.
 
 ## Overview

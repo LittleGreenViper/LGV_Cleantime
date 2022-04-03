@@ -1,3 +1,7 @@
+**1.3.3** *April 3, 2022*
+
+- Minor documentation tweak. No other changes.
+
 **1.3.2** *March 15, 2022*
 
 - Updated to the latest tools. No other changes.
