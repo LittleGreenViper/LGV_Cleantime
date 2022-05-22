@@ -1,3 +1,7 @@
+**1.3.4** *May 22, 2022*
+
+- Added explicit tests for each platform. No operational or SDK changes.
+
 **1.3.3** *April 3, 2022*
 
 - Minor documentation tweak. No other changes.
