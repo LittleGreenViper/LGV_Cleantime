@@ -1,3 +1,7 @@
+**1.3.5** *May 31, 2022*
+
+- Removed the dash-notation from the test target. No other changes.
+
 **1.3.4** *May 22, 2022*
 
 - Added explicit tests for each platform. No operational or SDK changes.

@@ -34,7 +34,7 @@ let package = Package(
                        )
               ],
     targets: [.target(name: "LGV_Cleantime"),
-              .testTarget(name: "LGV-CleantimeTests",
+              .testTarget(name: "LGV_CleantimeTests",
                           dependencies: ["LGV_Cleantime"],
                           path: "Tests/LGV_CleantimeTests"
                          )
