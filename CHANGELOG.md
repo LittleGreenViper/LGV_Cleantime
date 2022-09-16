@@ -1,3 +1,7 @@
+**1.3.6** *September 16, 2022*
+
+- Updated to the latest tools, and added SwiftLint. No API changes.
+
 **1.3.5** *May 31, 2022*
 
 - Removed the dash-notation from the test target. No other changes.

@@ -60,36 +60,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		D421F15B283AD52900416FA8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F178283AD5CA00416FA8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F30CFF283AD895002225C6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		D43C66D82694AC33007D5883 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LGV_Cleantime.docc; sourceTree = "<group>"; };
@@ -110,25 +80,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D421F13C283AD46000416FA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D421F14A283AD48C00416FA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D4F30CFC283AD878002225C6 /* libLGV_Cleantime (MacOS).a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F15A283AD52900416FA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,25 +96,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D421F177283AD5CA00416FA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D421F182283AD5E700416FA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D4F30CFA283AD848002225C6 /* libLGV_Cleantime (WatchOS).a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F30CFE283AD895002225C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,24 +196,13 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		D421F13A283AD46000416FA8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		D421F13D283AD46000416FA8 /* LGV_Cleantime (MacOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (MacOS)" */;
 			buildPhases = (
-				D421F13A283AD46000416FA8 /* Headers */,
+				D4B3B49828D4FB2E00327CB8 /* SwiftLint */,
 				D421F13B283AD46000416FA8 /* Sources */,
-				D421F13C283AD46000416FA8 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,9 +234,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D421F161283AD52900416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (iOS)" */;
 			buildPhases = (
+				D4B3B49928D4FB4400327CB8 /* SwiftLint */,
 				D421F159283AD52900416FA8 /* Sources */,
-				D421F15A283AD52900416FA8 /* Frameworks */,
-				D421F15B283AD52900416FA8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -337,9 +267,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D421F17E283AD5CA00416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (WatchOS)" */;
 			buildPhases = (
+				D4B3B49A28D4FB5C00327CB8 /* SwiftLint */,
 				D421F176283AD5CA00416FA8 /* Sources */,
-				D421F177283AD5CA00416FA8 /* Frameworks */,
-				D421F178283AD5CA00416FA8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -371,9 +300,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4F30D05283AD895002225C6 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (TVOS)" */;
 			buildPhases = (
+				D4B3B49B28D4FB7900327CB8 /* SwiftLint */,
 				D4F30CFD283AD895002225C6 /* Sources */,
-				D4F30CFE283AD895002225C6 /* Frameworks */,
-				D4F30CFF283AD895002225C6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -408,7 +336,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					D421F13D283AD46000416FA8 = {
 						CreatedOnToolsVersion = 13.4;
@@ -462,6 +390,85 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4B3B49828D4FB2E00327CB8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
+		};
+		D4B3B49928D4FB4400327CB8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
+		};
+		D4B3B49A28D4FB5C00327CB8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
+		};
+		D4B3B49B28D4FB7900327CB8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D421F13B283AD46000416FA8 /* Sources */ = {
@@ -567,6 +574,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -582,6 +590,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -598,6 +607,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -616,6 +626,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
