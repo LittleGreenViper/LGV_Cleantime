@@ -1,3 +1,7 @@
+**1.4.0** *January 11, 2022*
+
+- Added a predictor, for the next cleantime milestone.
+
 **1.3.6** *September 16, 2022*
 
 - Updated to the latest tools, and added SwiftLint. No API changes.

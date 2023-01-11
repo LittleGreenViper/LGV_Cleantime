@@ -1,7 +1,7 @@
 /*
   © Copyright 2022, Little Green Viper Software Development LLC
  
- Version: 1.3.6
+ Version: 1.4.0
  
  LICENSE:
  
@@ -518,12 +518,71 @@ public extension LGV_CleantimeDateCalc {
         
         return ret
     }
-
+    
+    /* ################################################################## */
+    /**
+     The next cleantime event. Returns an enum, with the next "milestone" to be achieved.
+     >NOTE: This will not "predict" major annual milestones, like twenty years, or forty years, unless that milestone is iminent (the next year, or, in the case of 10,000 days, the next 27.4 year milestone). Otherwise, it will return regular annual milestones.
+     */
+    var nextCleantimeMilestone: CleanTimeEvent {
+        guard 0 <= cleanTime.totalDays else { return .invalid }
+        
+        var ret = CleanTimeEvent.invalid
+        
+        let nextYear = CleanTimeEvent.years(numberOfYears: cleanTime.years + 1)
+        
+        if cleanTime.isFortyOrMoreYears {
+            ret = nextYear
+        } else if cleanTime.isThirtyOrMoreYears {
+            ret = 39 == cleanTime.years ? .fortyYears : nextYear
+        } else if cleanTime.isTenThousandDaysOrMore {
+            ret = 29 == cleanTime.years ? .thirtyYears : nextYear
+        } else if cleanTime.isTwentyFiveOrMoreYears {
+            ret = 27 == cleanTime.years ? .tenThousandDays : nextYear
+        } else if cleanTime.isTwentyOrMoreYears {
+            ret = 24 == cleanTime.years ? .twentyFiveYears : nextYear
+        } else if cleanTime.isFifteenOrMoreYears {
+            ret = 19 == cleanTime.years ? .twentyYears : nextYear
+        } else if cleanTime.isTenOrMoreYears {
+            ret = 14 == cleanTime.years ? .fifteenYears : nextYear
+        } else if cleanTime.isFiveOrMoreYears {
+            ret = 9 == cleanTime.years ? .tenYears : nextYear
+        } else if cleanTime.isTwoOrMoreYears {
+            ret = 4 == cleanTime.years ? .fiveYears : nextYear
+        } else if cleanTime.isEighteenMonthsOrMore {
+            ret = nextYear
+        } else if cleanTime.isOneYearOrMore {
+            ret = .eighteenMonths
+        } else if cleanTime.isNineMonthsOrMore {
+            ret = .oneYear
+        } else if cleanTime.isSixMonthsOrMore {
+            ret = .nineMonths
+        } else if cleanTime.isNinetyDaysOrMore {
+            ret = .sixMonths
+        } else if cleanTime.isSixtyDaysOrMore {
+            ret = .ninetyDays
+        } else if cleanTime.isThirtyDaysOrMore {
+            ret = .sixtyDays
+        } else if cleanTime.isOneDayOrMore {
+            ret = .thirtyDays
+        } else {
+            ret = .oneDay
+        }
+        
+        return ret
+    }
+    
     /* ################################################################## */
     /**
      The last cleantime event. Returns the date that the last cleantime milestone was met. Nil, if invalid.
      */
     var dateOfLastCleantimeMilestone: Date? { dateOfThisCleantimeMilestone(lastCleantimeMilestone) }
+    
+    /* ################################################################## */
+    /**
+     The last cleantime event. Returns the date that the next cleantime milestone will be met. Nil, if invalid.
+     */
+    var dateOfNextCleantimeMilestone: Date? { dateOfThisCleantimeMilestone(nextCleantimeMilestone) }
 
     /* ################################################################## */
     /**
@@ -621,7 +680,7 @@ public extension LGV_CleantimeDateCalc {
 
     /* ################################################################## */
     /**
-     This will return the exact date that a particular milestone was reached.
+     This will return the exact date that a particular milestone was/will be reached.
      - parameter inCleantimeMileStone: The enum, specifying the milestone to test.
      - returns: The date, or nil, if the milestone (or this struct) is invalid.
      */
