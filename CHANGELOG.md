@@ -1,3 +1,10 @@
+**1.4.1** *January 6, 2024*
+
+- Added privacy declarations.
+- Updated the tools.
+- Tweaked the tests. They had some compatibility issues.
+- Removed SwiftLint, because it stopped working. :(
+
 **1.4.0** *January 11, 2022*
 
 - Added a predictor, for the next cleantime milestone.

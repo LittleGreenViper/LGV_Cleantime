@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,7 @@
 		D421F191283AD61100416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */; };
 		D421F192283AD61500416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
 		D421F193283AD61500416FA8 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
-		D4F30CFA283AD848002225C6 /* libLGV_Cleantime (WatchOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */; };
+		D42759322B4A436300A540F2 /* libLGV_Cleantime (WatchOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */; platformFilters = (maccatalyst, watchos, ); };
 		D4F30CFB283AD86A002225C6 /* libLGV_Cleantime (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */; };
 		D4F30CFC283AD878002225C6 /* libLGV_Cleantime (MacOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF3283AD833002225C6 /* libLGV_Cleantime (MacOS).a */; };
 		D4F30D10283AD8AF002225C6 /* libLGV_Cleantime (TVOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30D01283AD895002225C6 /* libLGV_Cleantime (TVOS).a */; };
@@ -44,7 +44,7 @@
 			remoteGlobalIDString = D421F15C283AD52900416FA8;
 			remoteInfo = "LGV_Cleantime (iOS)";
 		};
-		D421F18A283AD5E700416FA8 /* PBXContainerItemProxy */ = {
+		D42759332B4A436300A540F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D43C667F2694AA88007D5883 /* Project object */;
 			proxyType = 1;
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F30CFA283AD848002225C6 /* libLGV_Cleantime (WatchOS).a in Frameworks */,
+				D42759322B4A436300A540F2 /* libLGV_Cleantime (WatchOS).a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +201,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (MacOS)" */;
 			buildPhases = (
-				D4B3B49828D4FB2E00327CB8 /* SwiftLint */,
 				D421F13B283AD46000416FA8 /* Sources */,
 			);
 			buildRules = (
@@ -234,7 +233,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D421F161283AD52900416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (iOS)" */;
 			buildPhases = (
-				D4B3B49928D4FB4400327CB8 /* SwiftLint */,
 				D421F159283AD52900416FA8 /* Sources */,
 			);
 			buildRules = (
@@ -267,7 +265,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D421F17E283AD5CA00416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (WatchOS)" */;
 			buildPhases = (
-				D4B3B49A28D4FB5C00327CB8 /* SwiftLint */,
 				D421F176283AD5CA00416FA8 /* Sources */,
 			);
 			buildRules = (
@@ -289,7 +286,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D421F18B283AD5E700416FA8 /* PBXTargetDependency */,
+				D42759342B4A436300A540F2 /* PBXTargetDependency */,
 			);
 			name = "LGV_CleantimeTests (WatchOS)";
 			productName = "LGV_CleantimeTests (WatchOS)";
@@ -300,7 +297,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4F30D05283AD895002225C6 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (TVOS)" */;
 			buildPhases = (
-				D4B3B49B28D4FB7900327CB8 /* SwiftLint */,
 				D4F30CFD283AD895002225C6 /* Sources */,
 			);
 			buildRules = (
@@ -335,8 +331,9 @@
 		D43C667F2694AA88007D5883 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					D421F13D283AD46000416FA8 = {
 						CreatedOnToolsVersion = 13.4;
@@ -390,85 +387,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D4B3B49828D4FB2E00327CB8 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
-		};
-		D4B3B49928D4FB4400327CB8 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
-		};
-		D4B3B49A28D4FB5C00327CB8 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
-		};
-		D4B3B49B28D4FB7900327CB8 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint\nthen\n    swiftlint\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D421F13B283AD46000416FA8 /* Sources */ = {
@@ -556,10 +474,14 @@
 			target = D421F15C283AD52900416FA8 /* LGV_Cleantime (iOS) */;
 			targetProxy = D421F16F283AD56800416FA8 /* PBXContainerItemProxy */;
 		};
-		D421F18B283AD5E700416FA8 /* PBXTargetDependency */ = {
+		D42759342B4A436300A540F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilters = (
+				maccatalyst,
+				watchos,
+			);
 			target = D421F179283AD5CA00416FA8 /* LGV_Cleantime (WatchOS) */;
-			targetProxy = D421F18A283AD5E700416FA8 /* PBXContainerItemProxy */;
+			targetProxy = D42759332B4A436300A540F2 /* PBXContainerItemProxy */;
 		};
 		D4F30D12283AD8AF002225C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -577,11 +499,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -593,11 +516,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};
@@ -615,6 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--MacOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -634,6 +559,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--MacOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -646,10 +572,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -662,10 +590,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -680,9 +610,11 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--iOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -698,9 +630,11 @@
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--iOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -713,11 +647,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.5;
@@ -730,11 +666,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.5;
@@ -744,12 +682,12 @@
 		D421F18D283AD5E700416FA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--WatchOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -764,12 +702,12 @@
 		D421F18E283AD5E700416FA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--WatchOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -820,6 +758,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -889,6 +828,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -919,11 +859,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 15.4;
@@ -936,11 +878,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 15.4;
@@ -956,10 +900,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--TVOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -976,10 +922,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KSAUGZFWP2;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--TVOS-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;

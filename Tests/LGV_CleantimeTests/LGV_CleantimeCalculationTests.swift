@@ -19,7 +19,7 @@
  */
 
 import XCTest
-import LGV_Cleantime
+@testable import LGV_Cleantime
 
 /* ###################################################################################################################################### */
 // MARK: - Calculations Tests -
@@ -50,13 +50,13 @@ class LGV_CleantimeCalculationTests: XCTestCase {
     /**
      This will be the test end date. Defaults to now.
      */
-    var endDate = Date.now
+    var endDate = Date()
     
     /* ################################################################## */
     /**
      This will be the test start date. Defaults to now.
      */
-    var startDate = Date.now
+    var startDate = Date()
     
     /* ################################################################## */
     /**
