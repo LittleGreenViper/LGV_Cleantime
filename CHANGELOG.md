@@ -1,3 +1,7 @@
+**1.4.2** *July 17, 2024*
+
+- Added the thirty-five, forty-five, and fifty-year tags.
+
 **1.4.1** *January 6, 2024*
 
 - Added privacy declarations.

@@ -407,6 +407,38 @@ This denotes the milestones that we use in NA.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV04nextB9MilestoneAC14CleanTimeEventOvp"></a>
+                    <a name="//apple_ref/swift/Property/nextCleantimeMilestone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV04nextB9MilestoneAC14CleanTimeEventOvp">nextCleantimeMilestone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The next cleantime event. Returns an enum, with the next &ldquo;milestone&rdquo; to be achieved.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This will not &ldquo;predict&rdquo; major annual milestones, like twenty years, or forty years, unless that milestone is iminent (the next year, or, in the case of 10,000 days, the next 27.4 year milestone). Otherwise, it will return regular annual milestones.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nextCleantimeMilestone</span><span class="p">:</span> <span class="kt"><a href="../Structs/LGV_CleantimeDateCalc/CleanTimeEvent.html">CleanTimeEvent</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/dateOfLastCleantimeMilestone" class="dashAnchor"></a>
                     <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfLastB9Milestone10Foundation0C0VSgvp">dateOfLastCleantimeMilestone</a>
@@ -425,6 +457,33 @@ This denotes the milestones that we use in NA.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfLastCleantimeMilestone</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfNextB9Milestone10Foundation0C0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dateOfNextCleantimeMilestone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13LGV_Cleantime0a1_B8DateCalcV010dateOfNextB9Milestone10Foundation0C0VSgvp">dateOfNextCleantimeMilestone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last cleantime event. Returns the date that the next cleantime milestone will be met. Nil, if invalid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfNextCleantimeMilestone</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -624,7 +683,7 @@ This denotes the milestones that we use in NA.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This will return the exact date that a particular milestone was reached.</p>
+                        <p>This will return the exact date that a particular milestone was/will be reached.</p>
 
                       </div>
                       <div class="declaration">
@@ -736,8 +795,8 @@ This denotes the milestones that we use in NA.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-07-08)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-07-17)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

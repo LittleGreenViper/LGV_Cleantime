@@ -47,32 +47,32 @@ public struct LGV_CleantimeKeytagDescription {
         var ret: [LGV_CleantimeKeytagDescription] = inCurrent
         let totalYears = inTotalMonths / 12
         
-        ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 120, bodyImage: .body_Speckled, textImage: .text_TenYears))
+        ret.append(Self.keytags[KeytagIndexes.index_TenYears.rawValue])
         
         guard 10 < totalYears else { return ret }
 
         for _ in 11...min(totalYears, 14) {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
         
         if 15 <= totalYears {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 180, bodyImage: .body_HunterGreen, textImage: .text_FifteenYears))
+            ret.append(Self.keytags[KeytagIndexes.index_FifteenYears.rawValue])
         }
         
         guard 15 < totalYears else { return ret }
 
         for _ in 16...min(totalYears, 19) {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
         
         if 20 <= totalYears {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 240, bodyImage: .body_Purple, textImage: .text_TwentyYears))
+            ret.append(Self.keytags[KeytagIndexes.index_TwentyYears.rawValue])
         }
         
         guard 20 < totalYears else { return ret }
 
         for _ in 21...min(totalYears, 24) {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
         
         if 25 <= totalYears {
@@ -95,42 +95,72 @@ public struct LGV_CleantimeKeytagDescription {
         var ret: [LGV_CleantimeKeytagDescription] = inCurrent
         let totalYears = inTotalMonths / 12
         
-        ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 300, bodyImage: .body_HotPink, textImage: .text_TwentyFiveYears))
-    
+        ret.append(Self.keytags[KeytagIndexes.index_TwentyFiveYears.rawValue])
+
         guard 25 < totalYears else { return ret }
 
         for _ in 26...min(totalYears, 27) {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
         
         if 10000 <= inTotalDays {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 10000, totalMonths: 0, bodyImage: .body_Purple, textImage: .text_TenThousandDays))
+            ret.append(Self.keytags[KeytagIndexes.index_TenThousandDays.rawValue])
         }
         
         guard 27 < totalYears else { return ret }
         
         for _ in 28...min(totalYears, 29) {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
         
         if 30 <= totalYears {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 360, bodyImage: .body_Moonglow, textImage: .text_ThirtyYears))
+            ret.append(Self.keytags[KeytagIndexes.index_ThirtyYears.rawValue])
         }
         
         guard 30 < totalYears else { return ret }
         
-        for _ in 31...min(totalYears, 39) {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+        for _ in 31...min(totalYears, 34) {
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
-        
+
+        if 35 <= totalYears {
+            ret.append(Self.keytags[KeytagIndexes.index_ThirtyFiveYears.rawValue])
+        }
+
+        guard 35 < totalYears else { return ret }
+
+        for _ in 36...min(totalYears, 39) {
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
+        }
+
         if 40 <= totalYears {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 480, bodyImage: .body_Blue, textImage: .text_FortyYears))
+            ret.append(Self.keytags[KeytagIndexes.index_FortyYears.rawValue])
         }
-        
+
         guard 40 < totalYears else { return ret }
         
-        for _ in 41...totalYears {
-            ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+        for _ in 41...min(totalYears, 44) {
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
+        }
+
+        if 45 <= totalYears {
+            ret.append(Self.keytags[KeytagIndexes.index_FortyFiveYears.rawValue])
+        }
+
+        guard 45 < totalYears else { return ret }
+
+        for _ in 46...min(totalYears, 49) {
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
+        }
+
+        if 50 <= totalYears {
+            ret.append(Self.keytags[KeytagIndexes.index_FiftyYears.rawValue])
+        }
+
+        guard 50 < totalYears else { return ret }
+
+        for _ in 51...totalYears {
+            ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
         }
 
         return ret
@@ -347,17 +377,170 @@ public struct LGV_CleantimeKeytagDescription {
 
         /* ########################################################## */
         /**
-         Thirt years
+         Thirty years
          */
         case text_ThirtyYears
+
+        /* ########################################################## */
+        /**
+         Thirty-Five years
+         */
+        case text_ThirtyFiveYears
 
         /* ########################################################## */
         /**
          Forty years
          */
         case text_FortyYears
+
+        /* ########################################################## */
+        /**
+         Forty-Five years
+         */
+        case text_FortyFiveYears
+
+        /* ########################################################## */
+        /**
+         Fifty years
+         */
+        case text_FiftyYears
     }
     
+    /* ################################################################################################################################## */
+    // MARK: Index Keytags Array Enum
+    /* ################################################################################################################################## */
+    /* ############################################################## */
+    /**
+     This contains enums for all the keytags array elements.
+     */
+    public enum KeytagIndexes: Int {
+        /* ########################################################## */
+        /**
+         Welcome back, Kotter
+         */
+        case index_WelcomeBack
+
+        /* ########################################################## */
+        /**
+         One Day
+         */
+        case index_OneDay
+
+        /* ########################################################## */
+        /**
+         Thirty days
+         */
+        case index_ThirtyDays
+
+        /* ########################################################## */
+        /**
+         Sixty days
+         */
+        case index_SixtyDays
+
+        /* ########################################################## */
+        /**
+         Ninety days
+         */
+        case index_NinetyDays
+
+        /* ########################################################## */
+        /**
+         Six months
+         */
+        case index_SixMonths
+
+        /* ########################################################## */
+        /**
+         Nine months
+         */
+        case index_NineMonths
+
+        /* ########################################################## */
+        /**
+         One year
+         */
+        case index_OneYear
+
+        /* ########################################################## */
+        /**
+         Eighteen months
+         */
+        case index_EighteenMonths
+
+        /* ########################################################## */
+        /**
+         Two or more years
+         */
+        case index_MultiYear
+
+        /* ########################################################## */
+        /**
+         Five years
+         */
+        case index_FiveYears
+
+        /* ########################################################## */
+        /**
+         One decade (ten years)
+         */
+        case index_TenYears
+
+        /* ########################################################## */
+        /**
+         Fifteen years
+         */
+        case index_FifteenYears
+
+        /* ########################################################## */
+        /**
+         Decades (Twenty) years
+         */
+        case index_TwentyYears
+
+        /* ########################################################## */
+        /**
+         Twenty-five years
+         */
+        case index_TwentyFiveYears
+
+        /* ########################################################## */
+        /**
+         Twenty-seven point four (27.4) years, or ten thousand (10,000) days
+         */
+        case index_TenThousandDays
+
+        /* ########################################################## */
+        /**
+         Thirty years
+         */
+        case index_ThirtyYears
+
+        /* ########################################################## */
+        /**
+         Thirty-Five years
+         */
+        case index_ThirtyFiveYears
+
+        /* ########################################################## */
+        /**
+         Forty years
+         */
+        case index_FortyYears
+
+        /* ########################################################## */
+        /**
+         Forty-Five years
+         */
+        case index_FortyFiveYears
+
+        /* ########################################################## */
+        /**
+         Fifty years
+         */
+        case index_FiftyYears
+    }
+
     /* ################################################################################################################################## */
     // MARK: Public Static Constant Properties
     /* ################################################################################################################################## */
@@ -382,7 +565,10 @@ public struct LGV_CleantimeKeytagDescription {
                                                                    LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 300, bodyImage: .body_HotPink, textImage: .text_TwentyFiveYears),
                                                                    LGV_CleantimeKeytagDescription(totalDays: 10000, totalMonths: 0, bodyImage: .body_Purple, textImage: .text_TenThousandDays),
                                                                    LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 360, bodyImage: .body_Moonglow, textImage: .text_ThirtyYears),
-                                                                   LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 480, bodyImage: .body_Blue, textImage: .text_FortyYears)
+                                                                   LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 420, bodyImage: .body_BurntOrange, textImage: .text_ThirtyFiveYears),
+                                                                   LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 480, bodyImage: .body_Blue, textImage: .text_FortyYears),
+                                                                   LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 540, bodyImage: .body_Yellow, textImage: .text_FortyFiveYears),
+                                                                   LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 600, bodyImage: .body_Gray, textImage: .text_FiftyYears)
                                                                   ]
     
     /* ################################################################################################################################## */
@@ -417,17 +603,17 @@ public struct LGV_CleantimeKeytagDescription {
             guard 2 < totalYears else { return ret }
 
             for _ in 3...min(totalYears, 4) {
-                ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+                ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
             }
             
             if 5 <= totalYears {
-                ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 60, bodyImage: .body_BurntOrange, textImage: .text_FiveYears))
+                ret.append(Self.keytags[KeytagIndexes.index_FiveYears.rawValue])
             }
             
             guard 5 < totalYears else { return ret }
             
             for _ in 6...min(totalYears, 9) {
-                ret.append(LGV_CleantimeKeytagDescription(totalDays: 0, totalMonths: 24, bodyImage: .body_Black, textImage: .text_MultiYear))
+                ret.append(Self.keytags[KeytagIndexes.index_MultiYear.rawValue])
             }
             
             if 10 <= totalYears {
