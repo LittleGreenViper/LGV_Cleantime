@@ -1,3 +1,8 @@
+**1.4.3** *January 21, 2025*
+
+- Re-introduced SwiftLint
+- Reduced the cyclomatic complexity of a couple of functions.
+
 **1.4.2** *July 17, 2024*
 
 - Added the thirty-five, forty-five, and fifty-year tags.

@@ -1,7 +1,7 @@
 /*
   © Copyright 2022, Little Green Viper Software Development LLC
  
- Version: 1.4.1
+ Version: 1.4.2
 
  LICENSE:
  
@@ -117,6 +117,26 @@ public struct LGV_CleantimeKeytagDescription {
             ret.append(Self.keytags[KeytagIndexes.index_ThirtyYears.rawValue])
         }
         
+        if 30 <= totalYears {
+            ret = _getTheFullMonty4(ret, totalDays: inTotalDays, totalMonths: inTotalMonths)
+        }
+        
+        return ret
+    }
+    
+    /* ############################################################## */
+    /**
+     Part 4 of the "full chain" generator.
+     
+     - parameter inCurrent: The current chain.
+     - parameter totalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
+     - parameter totalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
+     - returns: An Array of the tag descriptions that apply, up to the date; including interim black tags.
+     */
+    private static func _getTheFullMonty4(_ inCurrent: [LGV_CleantimeKeytagDescription], totalDays inTotalDays: Int, totalMonths inTotalMonths: Int) -> [LGV_CleantimeKeytagDescription] {
+        var ret: [LGV_CleantimeKeytagDescription] = inCurrent
+        let totalYears = inTotalMonths / 12
+
         guard 30 < totalYears else { return ret }
         
         for _ in 31...min(totalYears, 34) {
@@ -136,6 +156,26 @@ public struct LGV_CleantimeKeytagDescription {
         if 40 <= totalYears {
             ret.append(Self.keytags[KeytagIndexes.index_FortyYears.rawValue])
         }
+
+        if 40 <= totalYears {
+            ret = _getTheFullMonty5(ret, totalDays: inTotalDays, totalMonths: inTotalMonths)
+        }
+        
+        return ret
+    }
+    
+    /* ############################################################## */
+    /**
+     Part 5 of the "full chain" generator.
+     
+     - parameter inCurrent: The current chain.
+     - parameter totalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
+     - parameter totalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
+     - returns: An Array of the tag descriptions that apply, up to the date; including interim black tags.
+     */
+    private static func _getTheFullMonty5(_ inCurrent: [LGV_CleantimeKeytagDescription], totalDays inTotalDays: Int, totalMonths inTotalMonths: Int) -> [LGV_CleantimeKeytagDescription] {
+        var ret: [LGV_CleantimeKeytagDescription] = inCurrent
+        let totalYears = inTotalMonths / 12
 
         guard 40 < totalYears else { return ret }
         

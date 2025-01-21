@@ -1,7 +1,7 @@
 /*
   © Copyright 2022, Little Green Viper Software Development LLC
  
- Version: 1.4.1
+ Version: 1.4.3
  
  LICENSE:
  
@@ -685,65 +685,91 @@ public extension LGV_CleantimeDateCalc {
      - returns: The date, or nil, if the milestone (or this struct) is invalid.
      */
     func dateOfThisCleantimeMilestone(_ inCleantimeMilestone: CleanTimeEvent) -> Date? {
-        var ret: Date?
-        
-        switch inCleantimeMilestone {
-        case .oneDay:
-            ret = daysFromStart(1)
+        func days(_ inCleantimeMilestone: CleanTimeEvent) -> Date? {
+            var ret: Date?
             
-        case .thirtyDays:
-            ret = daysFromStart(30)
-
-        case .sixtyDays:
-            ret = daysFromStart(60)
-
-        case .ninetyDays:
-            ret = daysFromStart(90)
-
-        case .sixMonths:
-            ret = monthsFromStart(6)
-
-        case .nineMonths:
-            ret = monthsFromStart(9)
-
-        case .oneYear:
-            ret = yearsFromStart(1)
-
-        case .eighteenMonths:
-            ret = monthsFromStart(18)
-
-        case .years(let numberOfYears):
-            ret = yearsFromStart(numberOfYears)
-
-        case .fiveYears:
-            ret = yearsFromStart(5)
-
-        case .tenYears:
-            ret = yearsFromStart(10)
-
-        case .fifteenYears:
-            ret = yearsFromStart(15)
-
-        case .twentyYears:
-            ret = yearsFromStart(20)
-
-        case .twentyFiveYears:
-            ret = yearsFromStart(25)
-
-        case .tenThousandDays:
-            ret = daysFromStart(10000)
-
-        case .thirtyYears:
-            ret = yearsFromStart(30)
-
-        case .fortyYears:
-            ret = yearsFromStart(40)
-
-        default:
-            break
+            switch inCleantimeMilestone {
+            case .oneDay:
+                ret = daysFromStart(1)
+                
+            case .thirtyDays:
+                ret = daysFromStart(30)
+                
+            case .sixtyDays:
+                ret = daysFromStart(60)
+                
+            case .ninetyDays:
+                ret = daysFromStart(90)
+                
+            default:
+                break
+            }
+            
+            return ret
         }
         
-        return ret
+        func months(_ inCleantimeMilestone: CleanTimeEvent) -> Date? {
+            var ret: Date?
+            
+            switch inCleantimeMilestone {
+            case .sixMonths:
+                ret = monthsFromStart(6)
+                
+            case .nineMonths:
+                ret = monthsFromStart(9)
+
+            case .eighteenMonths:
+                ret = monthsFromStart(18)
+
+            default:
+                break
+            }
+            
+            return ret
+        }
+        
+        func years(_ inCleantimeMilestone: CleanTimeEvent) -> Date? {
+            var ret: Date?
+            
+            switch inCleantimeMilestone {
+            case .oneYear:
+                ret = yearsFromStart(1)
+                
+            case .years(let numberOfYears):
+                ret = yearsFromStart(numberOfYears)
+                
+            case .fiveYears:
+                ret = yearsFromStart(5)
+                
+            case .tenYears:
+                ret = yearsFromStart(10)
+                
+            case .fifteenYears:
+                ret = yearsFromStart(15)
+                
+            case .twentyYears:
+                ret = yearsFromStart(20)
+                
+            case .twentyFiveYears:
+                ret = yearsFromStart(25)
+                
+            case .tenThousandDays:
+                ret = daysFromStart(10000)
+                
+            case .thirtyYears:
+                ret = yearsFromStart(30)
+                
+            case .fortyYears:
+                ret = yearsFromStart(40)
+                
+            default:
+                break
+            }
+            
+            return ret
+        }
+        
+        return days(inCleantimeMilestone) ?? months(inCleantimeMilestone) ?? years(inCleantimeMilestone)
     }
     
     // MARK: Date Utilities
