@@ -32,7 +32,10 @@ NA cleantime has a series of "culturally significant" milestones, recognized as 
 - 25 Years
 - 10,000 Days (27.4 Years)
 - 30 Years
+- 35 Years
 - 40 Years
+- 45 Years
+- 50 Years
 
 This module will accept two dates (a "cleandate," or the first day clean, and an "ending" day -usually today), and will calculate any and all milestones between those dates.
 

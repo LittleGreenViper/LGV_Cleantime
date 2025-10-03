@@ -26,7 +26,7 @@ let package = Package(
     platforms: [
         .iOS(.v14),
         .tvOS(.v14),
-        .watchOS(.v6),
+        .watchOS(.v10),
         .macOS(.v10_14)
     ],
     products: [.library( name: "LGV_Cleantime",

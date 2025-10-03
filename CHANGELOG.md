@@ -1,3 +1,7 @@
+**1.4.4** *October 3, 2025*
+- Set the Watch minimum to version 10
+- updated the docs
+
 **1.4.3** *January 21, 2025*
 
 - Re-introduced SwiftLint
