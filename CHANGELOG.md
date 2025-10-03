@@ -1,6 +1,7 @@
-**1.4.4** *October 3, 2025*
+**1.4.5** *October 3, 2025*
 - Set the Watch minimum to version 10
 - updated the docs
+- Updated the project and dependencies
 
 **1.4.3** *January 21, 2025*
 
