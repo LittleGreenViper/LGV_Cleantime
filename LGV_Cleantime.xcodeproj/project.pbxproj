@@ -20,8 +20,9 @@
 		D421F192283AD61500416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
 		D421F193283AD61500416FA8 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
 		D42759322B4A436300A540F2 /* libLGV_Cleantime (WatchOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */; platformFilters = (maccatalyst, watchos, ); };
+		D45653F12EE886B2000483F5 /* LGV_Cleantime.docc in Sources */ = {isa = PBXBuildFile; fileRef = D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */; };
 		D4F30CFB283AD86A002225C6 /* libLGV_Cleantime (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */; };
-		D4F30CFC283AD878002225C6 /* libLGV_Cleantime (MacOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF3283AD833002225C6 /* libLGV_Cleantime (MacOS).a */; };
+		D4F30CFC283AD878002225C6 /* libLGV_Cleantime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */; };
 		D4F30D10283AD8AF002225C6 /* libLGV_Cleantime (TVOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30D01283AD895002225C6 /* libLGV_Cleantime (TVOS).a */; };
 		D4F30D16283AD900002225C6 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
 		D4F30D17283AD900002225C6 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
@@ -70,7 +71,7 @@
 		D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagBuilderTests.swift; sourceTree = "<group>"; };
 		D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeDateCalc.swift; sourceTree = "<group>"; };
 		D4A5FE91269732BE009D0D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4F30CF3283AD833002225C6 /* libLGV_Cleantime (MacOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLGV_Cleantime (MacOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLGV_Cleantime.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F30CF4283AD833002225C6 /* LGV_CleantimeTests (MacOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LGV_CleantimeTests (MacOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLGV_Cleantime (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F30CF6283AD833002225C6 /* LGV_CleantimeTests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LGV_CleantimeTests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F30CFC283AD878002225C6 /* libLGV_Cleantime (MacOS).a in Frameworks */,
+				D4F30CFC283AD878002225C6 /* libLGV_Cleantime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +124,7 @@
 				D43C66912694AB9E007D5883 /* Sources */,
 				D43C66C52694AC20007D5883 /* Tests */,
 				D43C66D72694AC33007D5883 /* Project-Meta */,
-				D4F30CF3283AD833002225C6 /* libLGV_Cleantime (MacOS).a */,
+				D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */,
 				D4F30CF4283AD833002225C6 /* LGV_CleantimeTests (MacOS).xctest */,
 				D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */,
 				D4F30CF6283AD833002225C6 /* LGV_CleantimeTests (iOS).xctest */,
@@ -138,6 +139,7 @@
 		D43C66912694AB9E007D5883 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */,
 				D4A5FE90269732BE009D0D17 /* Meta */,
 				D43C66922694AB9E007D5883 /* LGV_Cleantime */,
 			);
@@ -149,7 +151,6 @@
 			children = (
 				D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */,
 				D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */,
-				D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */,
 			);
 			path = LGV_Cleantime;
 			sourceTree = "<group>";
@@ -199,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D421F13D283AD46000416FA8 /* LGV_Cleantime (MacOS) */ = {
+		D421F13D283AD46000416FA8 /* LGV_Cleantime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (MacOS)" */;
+			buildConfigurationList = D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime" */;
 			buildPhases = (
 				D4B32EC22D3FED68004F520C /* SwiftLint */,
 				D421F13B283AD46000416FA8 /* Sources */,
@@ -210,9 +211,9 @@
 			);
 			dependencies = (
 			);
-			name = "LGV_Cleantime (MacOS)";
+			name = LGV_Cleantime;
 			productName = "LGV_Cleantime (MacOS)";
-			productReference = D4F30CF3283AD833002225C6 /* libLGV_Cleantime (MacOS).a */;
+			productReference = D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D421F14C283AD48C00416FA8 /* LGV_CleantimeTests (MacOS) */ = {
@@ -339,7 +340,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					D421F13D283AD46000416FA8 = {
 						CreatedOnToolsVersion = 13.4;
@@ -382,7 +383,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D421F13D283AD46000416FA8 /* LGV_Cleantime (MacOS) */,
+				D421F13D283AD46000416FA8 /* LGV_Cleantime */,
 				D421F14C283AD48C00416FA8 /* LGV_CleantimeTests (MacOS) */,
 				D421F15C283AD52900416FA8 /* LGV_Cleantime (iOS) */,
 				D421F169283AD56700416FA8 /* LGV_CleantimeTests (iOS) */,
@@ -478,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45653F12EE886B2000483F5 /* LGV_Cleantime.docc in Sources */,
 				D421F147283AD46D00416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */,
 				D421F148283AD46D00416FA8 /* LGV_CleantimeDateCalc.swift in Sources */,
 			);
@@ -551,7 +553,7 @@
 /* Begin PBXTargetDependency section */
 		D421F153283AD48C00416FA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D421F13D283AD46000416FA8 /* LGV_Cleantime (MacOS) */;
+			target = D421F13D283AD46000416FA8 /* LGV_Cleantime */;
 			targetProxy = D421F152283AD48C00416FA8 /* PBXContainerItemProxy */;
 		};
 		D421F170283AD56800416FA8 /* PBXTargetDependency */ = {
@@ -863,6 +865,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
@@ -929,6 +932,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
@@ -1023,7 +1027,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (MacOS)" */ = {
+		D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D421F145283AD46000416FA8 /* Debug */,

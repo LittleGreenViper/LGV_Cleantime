@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "2600"
+   LastUpgradeVersion = "2610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D421F13D283AD46000416FA8"
-               BuildableName = "libLGV_Cleantime (MacOS).a"
-               BlueprintName = "LGV_Cleantime (MacOS)"
+               BuildableName = "libLGV_Cleantime.a"
+               BlueprintName = "LGV_Cleantime"
                ReferencedContainer = "container:LGV_Cleantime.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D421F13D283AD46000416FA8"
-            BuildableName = "libLGV_Cleantime (MacOS).a"
-            BlueprintName = "LGV_Cleantime (MacOS)"
+            BuildableName = "libLGV_Cleantime.a"
+            BlueprintName = "LGV_Cleantime"
             ReferencedContainer = "container:LGV_Cleantime.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

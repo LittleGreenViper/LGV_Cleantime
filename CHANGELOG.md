@@ -1,3 +1,7 @@
+**1.4.6** *December 9, 2025*
+- Fixed a few documentation issues.
+- Updated to the latest tools.
+
 **1.4.5** *October 3, 2025*
 - Set the Watch minimum to version 10
 - updated the docs

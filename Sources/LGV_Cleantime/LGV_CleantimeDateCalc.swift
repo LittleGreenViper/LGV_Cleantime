@@ -1,7 +1,7 @@
 /*
   © Copyright 2022, Little Green Viper Software Development LLC
  
- Version: 1.4.3
+ Version: 1.4.6
  
  LICENSE:
  
@@ -204,9 +204,9 @@ public struct LGV_CleantimeDateCalc {
     /**
      This is the designated initializer. It takes two dates, and calculates between them.
     
-     - parameter startDate: This is the "from" date. It is the start of the calculation. If not given, then an invalid date is assumed, and the result will be zero.
-     - parameter endDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
-     - parameter calendar: An optional calendar instance (default is nil). If nil, Gregorian is used.
+     - parameter inStartDate: This is the "from" date. It is the start of the calculation. If not given, then an invalid date is assumed, and the result will be zero.
+     - parameter inNowDate: This is the end date. The calculation goes between these two dates. This can be omitted, in which case, today is assumed.
+     - parameter inCalendar: An optional calendar instance (default is nil). If nil, Gregorian is used.
      */
     public init(startDate inStartDate: Date? = nil, endDate inNowDate: Date? = nil, calendar inCalendar: Calendar? = nil) {
         // If a calendar was passed in, we use that.
@@ -430,12 +430,12 @@ public struct LGV_CleantimeDateCalc {
         /**
          Basic initializer. All parameters required.
          - parameters:
-             - startDate: The starting date
-             - endDate: The ending date
-             - totalDays: The total number of days between the two dates (inclusive).
-             - years: The total number of years between the two dates.
-             - months: The  number of months, over the years, between the two dates.
-             - days: The  number of days, over the months and years, between the two dates.
+             - inStartDate: The starting date
+             - inEndDate: The ending date
+             - inTotalDays: The total number of days between the two dates (inclusive).
+             - inYears: The total number of years between the two dates.
+             - inMonths: The  number of months, over the years, between the two dates.
+             - inDays: The  number of days, over the months and years, between the two dates.
          */
         public init(startDate inStartDate: Date?, endDate inEndDate: Date?, totalDays inTotalDays: Int, years inYears: Int, months inMonths: Int, days inDays: Int) {
             totalDays = inTotalDays
@@ -681,7 +681,7 @@ public extension LGV_CleantimeDateCalc {
     /* ################################################################## */
     /**
      This will return the exact date that a particular milestone was/will be reached.
-     - parameter inCleantimeMileStone: The enum, specifying the milestone to test.
+     - parameter inCleantimeMilestone: The enum, specifying the milestone to test.
      - returns: The date, or nil, if the milestone (or this struct) is invalid.
      */
     func dateOfThisCleantimeMilestone(_ inCleantimeMilestone: CleanTimeEvent) -> Date? {

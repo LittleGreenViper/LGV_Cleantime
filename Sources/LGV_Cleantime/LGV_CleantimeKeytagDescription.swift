@@ -1,7 +1,7 @@
 /*
   © Copyright 2022, Little Green Viper Software Development LLC
  
- Version: 1.4.2
+ Version: 1.4.6
 
  LICENSE:
  
@@ -619,8 +619,8 @@ public struct LGV_CleantimeKeytagDescription {
      This returns the descriptions of all the tags that apply to the cleantime passed in.
      This is a "short" stack, meaning that only the highest awarded tag is used at various multi-year thresholds.
      
-     - parameter totalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
-     - parameter totalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
+     - parameter inTotalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
+     - parameter inTotalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
      - returns: An Array of the tag descriptions that apply, up to the date.
      */
     public static func getAShortStackOfTags(totalDays inTotalDays: Int = 0, totalMonths inTotalMonths: Int = 0) -> [LGV_CleantimeKeytagDescription] { keytags.filter { $0.doesThisTagApply(totalDays: inTotalDays, totalMonths: inTotalMonths) } }
@@ -630,8 +630,8 @@ public struct LGV_CleantimeKeytagDescription {
      This returns the descriptions of all the tags that apply to the cleantime passed in, but with multiple black (multiYear) tags between multi-year thresholds.
      It will only make a difference after two years.
      
-     - parameter totalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
-     - parameter totalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
+     - parameter inTotalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
+     - parameter inTotalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
      - returns: An Array of the tag descriptions that apply, up to the date; including interim black tags.
      */
     public static func getTheFullMonty(totalDays inTotalDays: Int = 0, totalMonths inTotalMonths: Int = 0) -> [LGV_CleantimeKeytagDescription] {
@@ -670,8 +670,8 @@ public struct LGV_CleantimeKeytagDescription {
     /**
      This returns the description of the highest tag that applies to the cleantime passed in.
      
-     - parameter totalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
-     - parameter totalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
+     - parameter inTotalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
+     - parameter inTotalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
      - returns: An Array of the tag descriptions that apply, up to the date. May be nil, if no tags apply.
      */
     public static func getLastTagThatApplies(totalDays inTotalDays: Int = 0, totalMonths inTotalMonths: Int = 0) -> LGV_CleantimeKeytagDescription? { getAShortStackOfTags(totalDays: inTotalDays, totalMonths: inTotalMonths).last }
@@ -713,8 +713,8 @@ public struct LGV_CleantimeKeytagDescription {
     /* ############################################################## */
     /**
      This lets us know if this tag applies to the cleantime passed in.
-     - parameter totalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
-     - parameter totalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
+     - parameter inTotalDays: The total day count. It is mutually exclusive with totalMonths. It's like Highlander: There can only be one...
+     - parameter inTotalMonths: The total number of months (including years). It is mutually exclusive with totalDays.
      - returns: True, if the tag applies (is for the exact time, or for less time).
      */
     public func doesThisTagApply(totalDays inTotalDays: Int = 0, totalMonths inTotalMonths: Int = 0) -> Bool {
