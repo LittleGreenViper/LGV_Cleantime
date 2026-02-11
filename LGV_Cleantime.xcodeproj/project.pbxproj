@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D41C3D8E2F3C1ADC00E406A7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D41C3D8C2F3C1AC000E406A7 /* Warnings.xcconfig */; };
+		D42CA5742F3C1FC900F73B8B /* LGV_Cleantime.docc in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */; };
 		D4AD25FB2F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F62F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift */; };
 		D4AD25FC2F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F72F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift */; };
-		D4AD25FD2F3C194F00CD08B5 /* LGV_Cleantime.docc in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */; };
-		D4AD26062F3C19C200CD08B5 /* libLGV_Cleantime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4152A932F3C192600656A8F /* libLGV_Cleantime.a */; platformFilters = (ios, macos, watchos, ); };
+		D4AD26062F3C19C200CD08B5 /* libLGV_Cleantime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4152A932F3C192600656A8F /* libLGV_Cleantime.a */; };
 		D4AD26122F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD260E2F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift */; };
 		D4AD26132F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD260D2F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift */; };
 /* End PBXBuildFile section */
@@ -230,9 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42CA5742F3C1FC900F73B8B /* LGV_Cleantime.docc in Sources */,
 				D4AD25FB2F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift in Sources */,
 				D4AD25FC2F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift in Sources */,
-				D4AD25FD2F3C194F00CD08B5 /* LGV_Cleantime.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,11 +250,6 @@
 /* Begin PBXTargetDependency section */
 		D4AD26082F3C19C200CD08B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilters = (
-				ios,
-				macos,
-				watchos,
-			);
 			target = D4152A922F3C192600656A8F /* LGV_Cleantime */;
 			targetProxy = D4AD26072F3C19C200CD08B5 /* PBXContainerItemProxy */;
 		};
@@ -393,8 +388,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -407,7 +402,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
-				TVOS_DEPLOYMENT_TARGET = 17.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
@@ -418,8 +413,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -431,7 +426,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
-				TVOS_DEPLOYMENT_TARGET = 17.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
@@ -443,19 +438,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.litlegreenviper.LGV-CleantimeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -466,19 +464,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.litlegreenviper.LGV-CleantimeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,4";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

@@ -1,3 +1,6 @@
+**1.4.8** *February 10, 2026*
+- Documentation and testing fixes.
+
 **1.4.7** *February 10, 2026*
 - Fixed a few documentation issues.
 - Fixed testing and package issues.
