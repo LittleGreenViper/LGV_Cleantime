@@ -82,6 +82,7 @@
 			children = (
 				D4AD25F62F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift */,
 				D4AD25F72F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift */,
+				D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */,
 			);
 			path = LGV_Cleantime;
 			sourceTree = "<group>";
@@ -90,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				D4AD25F82F3C194F00CD08B5 /* LGV_Cleantime */,
-				D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

@@ -1,3 +1,6 @@
+**1.4.9** *February 10, 2026*
+- Documentation fix.
+
 **1.4.8** *February 10, 2026*
 - Documentation and testing fixes.
 
