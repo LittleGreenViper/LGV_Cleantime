@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E41FCB4E-EA59-46FB-B6CB-8068CD1576B4",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:LGV_Cleantime.xcodeproj",
+        "identifier" : "D4AD26012F3C19C200CD08B5",
+        "name" : "LGV_CleantimeTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,3 +1,8 @@
+**1.4.7** *February 10, 2026*
+- Fixed a few documentation issues.
+- Fixed testing and package issues.
+- Updated to the latest tools.
+
 **1.4.6** *December 9, 2025*
 - Fixed a few documentation issues.
 - Updated to the latest tools.

@@ -3,457 +3,208 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D421F147283AD46D00416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
-		D421F148283AD46D00416FA8 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
-		D421F157283AD49400416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */; };
-		D421F158283AD49400416FA8 /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */; };
-		D421F164283AD54C00416FA8 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
-		D421F165283AD54C00416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
-		D421F174283AD57400416FA8 /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */; };
-		D421F175283AD57400416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */; };
-		D421F190283AD61100416FA8 /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */; };
-		D421F191283AD61100416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */; };
-		D421F192283AD61500416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
-		D421F193283AD61500416FA8 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
-		D42759322B4A436300A540F2 /* libLGV_Cleantime (WatchOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */; platformFilters = (maccatalyst, watchos, ); };
-		D45653F12EE886B2000483F5 /* LGV_Cleantime.docc in Sources */ = {isa = PBXBuildFile; fileRef = D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */; };
-		D4F30CFB283AD86A002225C6 /* libLGV_Cleantime (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */; };
-		D4F30CFC283AD878002225C6 /* libLGV_Cleantime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */; };
-		D4F30D10283AD8AF002225C6 /* libLGV_Cleantime (TVOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F30D01283AD895002225C6 /* libLGV_Cleantime (TVOS).a */; };
-		D4F30D16283AD900002225C6 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */; };
-		D4F30D17283AD900002225C6 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */; };
-		D4F30D18283AD905002225C6 /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */; };
-		D4F30D19283AD905002225C6 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */; };
+		D41C3D8E2F3C1ADC00E406A7 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D41C3D8C2F3C1AC000E406A7 /* Warnings.xcconfig */; };
+		D4AD25FB2F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F62F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift */; };
+		D4AD25FC2F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F72F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift */; };
+		D4AD25FD2F3C194F00CD08B5 /* LGV_Cleantime.docc in Sources */ = {isa = PBXBuildFile; fileRef = D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */; };
+		D4AD26062F3C19C200CD08B5 /* libLGV_Cleantime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4152A932F3C192600656A8F /* libLGV_Cleantime.a */; platformFilters = (ios, macos, watchos, ); };
+		D4AD26122F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD260E2F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift */; };
+		D4AD26132F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD260D2F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D421F152283AD48C00416FA8 /* PBXContainerItemProxy */ = {
+		D4AD26072F3C19C200CD08B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D43C667F2694AA88007D5883 /* Project object */;
+			containerPortal = D4152A8B2F3C192600656A8F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D421F13D283AD46000416FA8;
-			remoteInfo = "LGV_Cleantime (MacOS)";
-		};
-		D421F16F283AD56800416FA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D43C667F2694AA88007D5883 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D421F15C283AD52900416FA8;
-			remoteInfo = "LGV_Cleantime (iOS)";
-		};
-		D42759332B4A436300A540F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D43C667F2694AA88007D5883 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D421F179283AD5CA00416FA8;
-			remoteInfo = "LGV_Cleantime (WatchOS)";
-		};
-		D4F30D11283AD8AF002225C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D43C667F2694AA88007D5883 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4F30D00283AD895002225C6;
-			remoteInfo = "LGV_Cleantime (TVOS)";
+			remoteGlobalIDString = D4152A922F3C192600656A8F;
+			remoteInfo = LGV_Cleantime;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D43C66D82694AC33007D5883 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
-		D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LGV_Cleantime.docc; sourceTree = "<group>"; };
-		D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagDescription.swift; sourceTree = "<group>"; };
-		D48F60562D3FEE2800B63FDC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeCalculationTests.swift; sourceTree = "<group>"; };
-		D498CF5A269DB1B00076CC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagBuilderTests.swift; sourceTree = "<group>"; };
-		D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeDateCalc.swift; sourceTree = "<group>"; };
-		D4A5FE91269732BE009D0D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLGV_Cleantime.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30CF4283AD833002225C6 /* LGV_CleantimeTests (MacOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LGV_CleantimeTests (MacOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLGV_Cleantime (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30CF6283AD833002225C6 /* LGV_CleantimeTests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LGV_CleantimeTests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLGV_Cleantime (WatchOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30CF8283AD833002225C6 /* LGV_CleantimeTests (WatchOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LGV_CleantimeTests (WatchOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30D01283AD895002225C6 /* libLGV_Cleantime (TVOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLGV_Cleantime (TVOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F30D0C283AD8AF002225C6 /* LGV_CleantimeTests (TVOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LGV_CleantimeTests (TVOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4152A932F3C192600656A8F /* libLGV_Cleantime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLGV_Cleantime.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41C3D8C2F3C1AC000E406A7 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		D4AD25F62F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeDateCalc.swift; sourceTree = "<group>"; };
+		D4AD25F72F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagDescription.swift; sourceTree = "<group>"; };
+		D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LGV_Cleantime.docc; sourceTree = "<group>"; };
+		D4AD26022F3C19C200CD08B5 /* LGV_CleantimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LGV_CleantimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4AD260D2F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeCalculationTests.swift; sourceTree = "<group>"; };
+		D4AD260E2F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGV_CleantimeKeytagBuilderTests.swift; sourceTree = "<group>"; };
+		D4AD26142F3C1A1D00CD08B5 /* LGV_Cleantime.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LGV_Cleantime.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D421F14A283AD48C00416FA8 /* Frameworks */ = {
+		D4AD25FF2F3C19C200CD08B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F30CFC283AD878002225C6 /* libLGV_Cleantime.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F167283AD56700416FA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F30CFB283AD86A002225C6 /* libLGV_Cleantime (iOS).a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F182283AD5E700416FA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D42759322B4A436300A540F2 /* libLGV_Cleantime (WatchOS).a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F30D09283AD8AF002225C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F30D10283AD8AF002225C6 /* libLGV_Cleantime (TVOS).a in Frameworks */,
+				D4AD26062F3C19C200CD08B5 /* libLGV_Cleantime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D43C667E2694AA88007D5883 = {
+		D4152A8A2F3C192600656A8F = {
 			isa = PBXGroup;
 			children = (
-				D48F60562D3FEE2800B63FDC /* .swiftlint.yml */,
-				D43C66912694AB9E007D5883 /* Sources */,
-				D43C66C52694AC20007D5883 /* Tests */,
-				D43C66D72694AC33007D5883 /* Project-Meta */,
-				D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */,
-				D4F30CF4283AD833002225C6 /* LGV_CleantimeTests (MacOS).xctest */,
-				D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */,
-				D4F30CF6283AD833002225C6 /* LGV_CleantimeTests (iOS).xctest */,
-				D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */,
-				D4F30CF8283AD833002225C6 /* LGV_CleantimeTests (WatchOS).xctest */,
-				D4F30CF9283AD848002225C6 /* Frameworks */,
-				D4F30D01283AD895002225C6 /* libLGV_Cleantime (TVOS).a */,
-				D4F30D0C283AD8AF002225C6 /* LGV_CleantimeTests (TVOS).xctest */,
+				D41C3D8D2F3C1AC000E406A7 /* Project-Meta */,
+				D4AD25FA2F3C194F00CD08B5 /* Sources */,
+				D4AD26102F3C19D600CD08B5 /* Tests */,
+				D4152A942F3C192600656A8F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D43C66912694AB9E007D5883 /* Sources */ = {
+		D4152A942F3C192600656A8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D473D2DC27A457C7003E1A5C /* LGV_Cleantime.docc */,
-				D4A5FE90269732BE009D0D17 /* Meta */,
-				D43C66922694AB9E007D5883 /* LGV_Cleantime */,
+				D4152A932F3C192600656A8F /* libLGV_Cleantime.a */,
+				D4AD26022F3C19C200CD08B5 /* LGV_CleantimeTests.xctest */,
 			);
-			path = Sources;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		D43C66922694AB9E007D5883 /* LGV_Cleantime */ = {
+		D41C3D8D2F3C1AC000E406A7 /* Project-Meta */ = {
 			isa = PBXGroup;
 			children = (
-				D4A5FE8C26971DA0009D0D17 /* LGV_CleantimeDateCalc.swift */,
-				D47B1DF2269CDF0B00139C2C /* LGV_CleantimeKeytagDescription.swift */,
-			);
-			path = LGV_Cleantime;
-			sourceTree = "<group>";
-		};
-		D43C66C52694AC20007D5883 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D498CF5A269DB1B00076CC3A /* Info.plist */,
-				D498CF61269DB1D00076CC3A /* LGV_CleantimeTests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		D43C66D72694AC33007D5883 /* Project-Meta */ = {
-			isa = PBXGroup;
-			children = (
-				D43C66D82694AC33007D5883 /* Warnings.xcconfig */,
+				D41C3D8C2F3C1AC000E406A7 /* Warnings.xcconfig */,
 			);
 			path = "Project-Meta";
 			sourceTree = "<group>";
 		};
-		D498CF61269DB1D00076CC3A /* LGV_CleantimeTests */ = {
+		D4AD25F82F3C194F00CD08B5 /* LGV_Cleantime */ = {
 			isa = PBXGroup;
 			children = (
-				D498CF58269DB1B00076CC3A /* LGV_CleantimeCalculationTests.swift */,
-				D498CF62269DD1360076CC3A /* LGV_CleantimeKeytagBuilderTests.swift */,
+				D4AD25F62F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift */,
+				D4AD25F72F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift */,
+			);
+			path = LGV_Cleantime;
+			sourceTree = "<group>";
+		};
+		D4AD25FA2F3C194F00CD08B5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD25F82F3C194F00CD08B5 /* LGV_Cleantime */,
+				D4AD25F92F3C194F00CD08B5 /* LGV_Cleantime.docc */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D4AD260F2F3C19D600CD08B5 /* LGV_CleantimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD26142F3C1A1D00CD08B5 /* LGV_Cleantime.xctestplan */,
+				D4AD260D2F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift */,
+				D4AD260E2F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift */,
 			);
 			path = LGV_CleantimeTests;
 			sourceTree = "<group>";
 		};
-		D4A5FE90269732BE009D0D17 /* Meta */ = {
+		D4AD26102F3C19D600CD08B5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D4A5FE91269732BE009D0D17 /* Info.plist */,
+				D4AD260F2F3C19D600CD08B5 /* LGV_CleantimeTests */,
 			);
-			name = Meta;
-			path = Sources/Meta;
-			sourceTree = SOURCE_ROOT;
-		};
-		D4F30CF9283AD848002225C6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D421F13D283AD46000416FA8 /* LGV_Cleantime */ = {
+		D4152A922F3C192600656A8F /* LGV_Cleantime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime" */;
+			buildConfigurationList = D4152A9A2F3C192600656A8F /* Build configuration list for PBXNativeTarget "LGV_Cleantime" */;
 			buildPhases = (
-				D4B32EC22D3FED68004F520C /* SwiftLint */,
-				D421F13B283AD46000416FA8 /* Sources */,
+				D44D03882F3C1C9300652115 /* SwiftLint */,
+				D4152A8F2F3C192600656A8F /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LGV_Cleantime;
-			productName = "LGV_Cleantime (MacOS)";
-			productReference = D4F30CF3283AD833002225C6 /* libLGV_Cleantime.a */;
+			packageProductDependencies = (
+			);
+			productName = LGV_Cleantime;
+			productReference = D4152A932F3C192600656A8F /* libLGV_Cleantime.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D421F14C283AD48C00416FA8 /* LGV_CleantimeTests (MacOS) */ = {
+		D4AD26012F3C19C200CD08B5 /* LGV_CleantimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D421F154283AD48C00416FA8 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (MacOS)" */;
+			buildConfigurationList = D4AD26092F3C19C200CD08B5 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests" */;
 			buildPhases = (
-				D421F149283AD48C00416FA8 /* Sources */,
-				D421F14A283AD48C00416FA8 /* Frameworks */,
+				D4AD25FE2F3C19C200CD08B5 /* Sources */,
+				D4AD25FF2F3C19C200CD08B5 /* Frameworks */,
+				D4AD26002F3C19C200CD08B5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D421F153283AD48C00416FA8 /* PBXTargetDependency */,
+				D4AD26082F3C19C200CD08B5 /* PBXTargetDependency */,
 			);
-			name = "LGV_CleantimeTests (MacOS)";
-			productName = "LGV_CleantimeTests (MacOS)";
-			productReference = D4F30CF4283AD833002225C6 /* LGV_CleantimeTests (MacOS).xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D421F15C283AD52900416FA8 /* LGV_Cleantime (iOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D421F161283AD52900416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (iOS)" */;
-			buildPhases = (
-				D4B32EC32D3FED7E004F520C /* SwiftLint */,
-				D421F159283AD52900416FA8 /* Sources */,
+			name = LGV_CleantimeTests;
+			packageProductDependencies = (
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LGV_Cleantime (iOS)";
-			productName = "LGV_Cleantime (iOS)";
-			productReference = D4F30CF5283AD833002225C6 /* libLGV_Cleantime (iOS).a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D421F169283AD56700416FA8 /* LGV_CleantimeTests (iOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D421F171283AD56800416FA8 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (iOS)" */;
-			buildPhases = (
-				D421F166283AD56700416FA8 /* Sources */,
-				D421F167283AD56700416FA8 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D421F170283AD56800416FA8 /* PBXTargetDependency */,
-			);
-			name = "LGV_CleantimeTests (iOS)";
-			productName = "LGV_CleantimeTests (iOS)";
-			productReference = D4F30CF6283AD833002225C6 /* LGV_CleantimeTests (iOS).xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D421F179283AD5CA00416FA8 /* LGV_Cleantime (WatchOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D421F17E283AD5CA00416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (WatchOS)" */;
-			buildPhases = (
-				D4B32EC42D3FED90004F520C /* SwiftLint */,
-				D421F176283AD5CA00416FA8 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LGV_Cleantime (WatchOS)";
-			productName = "LGV_Cleantime (WatchOS)";
-			productReference = D4F30CF7283AD833002225C6 /* libLGV_Cleantime (WatchOS).a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D421F184283AD5E700416FA8 /* LGV_CleantimeTests (WatchOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D421F18C283AD5E700416FA8 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (WatchOS)" */;
-			buildPhases = (
-				D421F181283AD5E700416FA8 /* Sources */,
-				D421F182283AD5E700416FA8 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D42759342B4A436300A540F2 /* PBXTargetDependency */,
-			);
-			name = "LGV_CleantimeTests (WatchOS)";
-			productName = "LGV_CleantimeTests (WatchOS)";
-			productReference = D4F30CF8283AD833002225C6 /* LGV_CleantimeTests (WatchOS).xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D4F30D00283AD895002225C6 /* LGV_Cleantime (TVOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F30D05283AD895002225C6 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (TVOS)" */;
-			buildPhases = (
-				D4B32EC52D3FEDA1004F520C /* SwiftLint */,
-				D4F30CFD283AD895002225C6 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LGV_Cleantime (TVOS)";
-			productName = "LGV_Cleantime (TVOS)";
-			productReference = D4F30D01283AD895002225C6 /* libLGV_Cleantime (TVOS).a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D4F30D0B283AD8AF002225C6 /* LGV_CleantimeTests (TVOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F30D13283AD8AF002225C6 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (TVOS)" */;
-			buildPhases = (
-				D4F30D08283AD8AF002225C6 /* Sources */,
-				D4F30D09283AD8AF002225C6 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D4F30D12283AD8AF002225C6 /* PBXTargetDependency */,
-			);
-			name = "LGV_CleantimeTests (TVOS)";
-			productName = "LGV_CleantimeTests (TVOS)";
-			productReference = D4F30D0C283AD8AF002225C6 /* LGV_CleantimeTests (TVOS).xctest */;
+			productName = LGV_CleantimeTests;
+			productReference = D4AD26022F3C19C200CD08B5 /* LGV_CleantimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D43C667F2694AA88007D5883 /* Project object */ = {
+		D4152A8B2F3C192600656A8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 2610;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					D421F13D283AD46000416FA8 = {
-						CreatedOnToolsVersion = 13.4;
+					D4152A922F3C192600656A8F = {
+						CreatedOnToolsVersion = 26.2;
 					};
-					D421F14C283AD48C00416FA8 = {
-						CreatedOnToolsVersion = 13.4;
-					};
-					D421F15C283AD52900416FA8 = {
-						CreatedOnToolsVersion = 13.4;
-					};
-					D421F169283AD56700416FA8 = {
-						CreatedOnToolsVersion = 13.4;
-					};
-					D421F179283AD5CA00416FA8 = {
-						CreatedOnToolsVersion = 13.4;
-					};
-					D421F184283AD5E700416FA8 = {
-						CreatedOnToolsVersion = 13.4;
-					};
-					D4F30D00283AD895002225C6 = {
-						CreatedOnToolsVersion = 13.4;
-					};
-					D4F30D0B283AD8AF002225C6 = {
-						CreatedOnToolsVersion = 13.4;
+					D4AD26012F3C19C200CD08B5 = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = D43C66822694AA88007D5883 /* Build configuration list for PBXProject "LGV_Cleantime" */;
-			compatibilityVersion = "Xcode 12.0";
+			buildConfigurationList = D4152A8E2F3C192600656A8F /* Build configuration list for PBXProject "LGV_Cleantime" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D43C667E2694AA88007D5883;
-			packageReferences = (
-			);
-			productRefGroup = D43C667E2694AA88007D5883;
+			mainGroup = D4152A8A2F3C192600656A8F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D4152A942F3C192600656A8F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D421F13D283AD46000416FA8 /* LGV_Cleantime */,
-				D421F14C283AD48C00416FA8 /* LGV_CleantimeTests (MacOS) */,
-				D421F15C283AD52900416FA8 /* LGV_Cleantime (iOS) */,
-				D421F169283AD56700416FA8 /* LGV_CleantimeTests (iOS) */,
-				D421F179283AD5CA00416FA8 /* LGV_Cleantime (WatchOS) */,
-				D421F184283AD5E700416FA8 /* LGV_CleantimeTests (WatchOS) */,
-				D4F30D00283AD895002225C6 /* LGV_Cleantime (TVOS) */,
-				D4F30D0B283AD8AF002225C6 /* LGV_CleantimeTests (TVOS) */,
+				D4152A922F3C192600656A8F /* LGV_Cleantime */,
+				D4AD26012F3C19C200CD08B5 /* LGV_CleantimeTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D4AD26002F3C19C200CD08B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41C3D8E2F3C1ADC00E406A7 /* Warnings.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
-		D4B32EC22D3FED68004F520C /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint 2>&1 >/dev/null\nthen\n    cd ${PROJECT_DIR}\n    swiftlint\nfi\n";
-		};
-		D4B32EC32D3FED7E004F520C /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint 2>&1 >/dev/null\nthen\n    cd ${PROJECT_DIR}\n    swiftlint\nfi\n";
-		};
-		D4B32EC42D3FED90004F520C /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swiftlint 2>&1 >/dev/null\nthen\n    cd ${PROJECT_DIR}\n    swiftlint\nfi\n";
-		};
-		D4B32EC52D3FEDA1004F520C /* SwiftLint */ = {
+		D44D03882F3C1C9300652115 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -475,346 +226,50 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D421F13B283AD46000416FA8 /* Sources */ = {
+		D4152A8F2F3C192600656A8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D45653F12EE886B2000483F5 /* LGV_Cleantime.docc in Sources */,
-				D421F147283AD46D00416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */,
-				D421F148283AD46D00416FA8 /* LGV_CleantimeDateCalc.swift in Sources */,
+				D4AD25FB2F3C194F00CD08B5 /* LGV_CleantimeDateCalc.swift in Sources */,
+				D4AD25FC2F3C194F00CD08B5 /* LGV_CleantimeKeytagDescription.swift in Sources */,
+				D4AD25FD2F3C194F00CD08B5 /* LGV_Cleantime.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D421F149283AD48C00416FA8 /* Sources */ = {
+		D4AD25FE2F3C19C200CD08B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D421F157283AD49400416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */,
-				D421F158283AD49400416FA8 /* LGV_CleantimeCalculationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F159283AD52900416FA8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D421F165283AD54C00416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */,
-				D421F164283AD54C00416FA8 /* LGV_CleantimeDateCalc.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F166283AD56700416FA8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D421F174283AD57400416FA8 /* LGV_CleantimeCalculationTests.swift in Sources */,
-				D421F175283AD57400416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F176283AD5CA00416FA8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D421F192283AD61500416FA8 /* LGV_CleantimeKeytagDescription.swift in Sources */,
-				D421F193283AD61500416FA8 /* LGV_CleantimeDateCalc.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D421F181283AD5E700416FA8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D421F190283AD61100416FA8 /* LGV_CleantimeCalculationTests.swift in Sources */,
-				D421F191283AD61100416FA8 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F30CFD283AD895002225C6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F30D17283AD900002225C6 /* LGV_CleantimeKeytagDescription.swift in Sources */,
-				D4F30D16283AD900002225C6 /* LGV_CleantimeDateCalc.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F30D08283AD8AF002225C6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F30D18283AD905002225C6 /* LGV_CleantimeCalculationTests.swift in Sources */,
-				D4F30D19283AD905002225C6 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */,
+				D4AD26122F3C19D600CD08B5 /* LGV_CleantimeKeytagBuilderTests.swift in Sources */,
+				D4AD26132F3C19D600CD08B5 /* LGV_CleantimeCalculationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D421F153283AD48C00416FA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D421F13D283AD46000416FA8 /* LGV_Cleantime */;
-			targetProxy = D421F152283AD48C00416FA8 /* PBXContainerItemProxy */;
-		};
-		D421F170283AD56800416FA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D421F15C283AD52900416FA8 /* LGV_Cleantime (iOS) */;
-			targetProxy = D421F16F283AD56800416FA8 /* PBXContainerItemProxy */;
-		};
-		D42759342B4A436300A540F2 /* PBXTargetDependency */ = {
+		D4AD26082F3C19C200CD08B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilters = (
-				maccatalyst,
+				ios,
+				macos,
 				watchos,
 			);
-			target = D421F179283AD5CA00416FA8 /* LGV_Cleantime (WatchOS) */;
-			targetProxy = D42759332B4A436300A540F2 /* PBXContainerItemProxy */;
-		};
-		D4F30D12283AD8AF002225C6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4F30D00283AD895002225C6 /* LGV_Cleantime (TVOS) */;
-			targetProxy = D4F30D11283AD8AF002225C6 /* PBXContainerItemProxy */;
+			target = D4152A922F3C192600656A8F /* LGV_Cleantime */;
+			targetProxy = D4AD26072F3C19C200CD08B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D421F145283AD46000416FA8 /* Debug */ = {
+		D4152A982F3C192600656A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D41C3D8C2F3C1AC000E406A7 /* Warnings.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-			};
-			name = Debug;
-		};
-		D421F146283AD46000416FA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-			};
-			name = Release;
-		};
-		D421F155283AD48C00416FA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--MacOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		D421F156283AD48C00416FA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--MacOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		D421F162283AD52900416FA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D421F163283AD52900416FA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D421F172283AD56800416FA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--iOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D421F173283AD56800416FA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--iOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D421F17F283AD5CA00416FA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		D421F180283AD5CA00416FA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
-		D421F18D283AD5E700416FA8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--WatchOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		D421F18E283AD5E700416FA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--WatchOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
-		D43C668C2694AA88007D5883 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D43C66D82694AC33007D5883 /* Warnings.xcconfig */;
-			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -842,11 +297,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				DEVELOPMENT_TEAM = P53V4JS928;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -860,35 +315,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
-		D43C668D2694AA88007D5883 /* Release */ = {
+		D4152A992F3C192600656A8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D43C66D82694AC33007D5883 /* Warnings.xcconfig */;
+			baseConfigurationReference = D41C3D8C2F3C1AC000E406A7 /* Warnings.xcconfig */;
 			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -916,11 +362,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = KSAUGZFWP2;
+				DEVELOPMENT_TEAM = P53V4JS928;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -928,187 +374,145 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
-		D4F30D06283AD895002225C6 /* Debug */ = {
+		D4152A9B2F3C192600656A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P53V4JS928;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
+				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 15.4;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
-		D4F30D07283AD895002225C6 /* Release */ = {
+		D4152A9C2F3C192600656A8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P53V4JS928;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_MODULE_NAME = LGV_Cleantime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 15.4;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
-		D4F30D14283AD8AF002225C6 /* Debug */ = {
+		D4AD260A2F3C19C200CD08B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P53V4JS928;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--TVOS-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litlegreenviper.LGV-CleantimeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 15.4;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
 			};
 			name = Debug;
 		};
-		D4F30D15283AD8AF002225C6 /* Release */ = {
+		D4AD260B2F3C19C200CD08B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P53V4JS928;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.riftvalleysoftware.LGV-CleantimeTests--TVOS-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litlegreenviper.LGV-CleantimeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 15.4;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D421F144283AD46000416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime" */ = {
+		D4152A8E2F3C192600656A8F /* Build configuration list for PBXProject "LGV_Cleantime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D421F145283AD46000416FA8 /* Debug */,
-				D421F146283AD46000416FA8 /* Release */,
+				D4152A982F3C192600656A8F /* Debug */,
+				D4152A992F3C192600656A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D421F154283AD48C00416FA8 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (MacOS)" */ = {
+		D4152A9A2F3C192600656A8F /* Build configuration list for PBXNativeTarget "LGV_Cleantime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D421F155283AD48C00416FA8 /* Debug */,
-				D421F156283AD48C00416FA8 /* Release */,
+				D4152A9B2F3C192600656A8F /* Debug */,
+				D4152A9C2F3C192600656A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D421F161283AD52900416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (iOS)" */ = {
+		D4AD26092F3C19C200CD08B5 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D421F162283AD52900416FA8 /* Debug */,
-				D421F163283AD52900416FA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D421F171283AD56800416FA8 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (iOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D421F172283AD56800416FA8 /* Debug */,
-				D421F173283AD56800416FA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D421F17E283AD5CA00416FA8 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (WatchOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D421F17F283AD5CA00416FA8 /* Debug */,
-				D421F180283AD5CA00416FA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D421F18C283AD5E700416FA8 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (WatchOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D421F18D283AD5E700416FA8 /* Debug */,
-				D421F18E283AD5E700416FA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D43C66822694AA88007D5883 /* Build configuration list for PBXProject "LGV_Cleantime" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D43C668C2694AA88007D5883 /* Debug */,
-				D43C668D2694AA88007D5883 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F30D05283AD895002225C6 /* Build configuration list for PBXNativeTarget "LGV_Cleantime (TVOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4F30D06283AD895002225C6 /* Debug */,
-				D4F30D07283AD895002225C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F30D13283AD8AF002225C6 /* Build configuration list for PBXNativeTarget "LGV_CleantimeTests (TVOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4F30D14283AD8AF002225C6 /* Debug */,
-				D4F30D15283AD8AF002225C6 /* Release */,
+				D4AD260A2F3C19C200CD08B5 /* Debug */,
+				D4AD260B2F3C19C200CD08B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D43C667F2694AA88007D5883 /* Project object */;
+	rootObject = D4152A8B2F3C192600656A8F /* Project object */;
 }

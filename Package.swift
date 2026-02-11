@@ -1,7 +1,7 @@
 // swift-tools-version:5.9
 
 /*
- © Copyright 2021, Little Green Viper Software Development LLC 
+ © Copyright 2021-2026, Little Green Viper Software Development LLC 
  LICENSE:
  
  MIT License
@@ -33,10 +33,16 @@ let package = Package(
                          targets: ["LGV_Cleantime"]
                        )
               ],
-    targets: [.target(name: "LGV_Cleantime"),
-              .testTarget(name: "LGV_CleantimeTests",
-                          dependencies: ["LGV_Cleantime"],
-                          path: "Tests/LGV_CleantimeTests"
-                         )
-             ]
+    targets: [
+        .target(
+            name: "LGV_Cleantime",
+            path: "Sources/LGV_Cleantime"
+        ),
+        .testTarget(
+            name: "LGV_CleantimeTests",
+            dependencies: ["LGV_Cleantime"],
+            path: "Tests/LGV_CleantimeTests",
+            exclude: ["LGV_Cleantime.xctestplan"]
+        )
+    ]
 )

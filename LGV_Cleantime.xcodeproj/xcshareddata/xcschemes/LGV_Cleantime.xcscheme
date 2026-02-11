@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "2610"
-   version = "1.3">
+   LastUpgradeVersion = "2620"
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D421F15C283AD52900416FA8"
-               BuildableName = "libLGV_Cleantime (iOS).a"
-               BlueprintName = "LGV_Cleantime (iOS)"
+               BlueprintIdentifier = "D4152A922F3C192600656A8F"
+               BuildableName = "libLGV_Cleantime.a"
+               BlueprintName = "LGV_Cleantime"
                ReferencedContainer = "container:LGV_Cleantime.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,18 +28,12 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D421F169283AD56700416FA8"
-               BuildableName = "LGV_CleantimeTests (iOS).xctest"
-               BlueprintName = "LGV_CleantimeTests (iOS)"
-               ReferencedContainer = "container:LGV_Cleantime.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:Tests/LGV_CleantimeTests/LGV_Cleantime.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -60,9 +55,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D421F15C283AD52900416FA8"
-            BuildableName = "libLGV_Cleantime (iOS).a"
-            BlueprintName = "LGV_Cleantime (iOS)"
+            BlueprintIdentifier = "D4152A922F3C192600656A8F"
+            BuildableName = "libLGV_Cleantime.a"
+            BlueprintName = "LGV_Cleantime"
             ReferencedContainer = "container:LGV_Cleantime.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
